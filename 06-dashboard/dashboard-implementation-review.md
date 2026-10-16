@@ -70,7 +70,15 @@ I also retained `IIR | Gates Under Review` as a saved filter but removed its red
 
 ## Selected visual evidence
 
-I selected only two images for the final portfolio: a full six-gadget overview (`DASH-01-Innovation-Governance-Dashboard-Overview.png`) and a readable core-gate decision detail (`DASH-02-Core-Gates-and-Decision-Matrix.png`). **These image files are not yet committed in this review branch.** I will place them under `assets/evidence/` and add working links before merging this documentation into `main`.
+I selected two screenshots for the final portfolio and uploaded both to `assets/evidence/` on `main`. I verified their exact repository paths. They are linked below; this documentation PR does not duplicate the binary files.
+
+![Final six-gadget Innovation Governance Dashboard](../assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png)
+
+*Figure 1 — Complete six-gadget dashboard, with three core gates only.*
+
+![Core gate details and governance decision matrix](../assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png)
+
+*Figure 2 — Readable core-gate detail and governance review matrix.*
 
 ## AI contribution and accountability
 
