@@ -37,6 +37,8 @@ I recorded **nine passing integration tests** on 15 October 2026. I report the 1
 | D | Stage 4 transition governance (AUTO-06) | Pass, I confirmed during testing |
 | E | Missing weighted score and stale recommendation reset (AUTO-08) | Pass, I confirmed during testing |
 
+For a transparent retrospective summary, see the [reconstructed integration test register](reconstructed-integration-test-register.md). Its coverage references are not original case IDs.
+
 **Traceability gap:** The nine individual test IDs, exact inputs, timestamps, expected/actual outputs, and screenshot paths must be reconciled with the latest test worksheet or GitHub evidence directory before this draft is marked final. Do not infer nine separate cases from the five coverage areas above.
 
 ### AUTO-04 v2 follow-up — 16 October 2026
