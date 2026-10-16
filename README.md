@@ -9,7 +9,7 @@ I designed, configured, tested and documented a **simulated organizational innov
 | Simulated Gate 1 design and evidence | [Gate 1 concept review](01-system-design/gate-1-concept-review-evidence.md) |
 | Automation rules AUTO-01–AUTO-08 | [Rule catalog](03-automation-rules/automation-rule-catalog.md) |
 | Stage-gate governance | [Governance and traceability](03-automation-rules/governance-and-traceability.md) |
-| Integration testing | [Integration test report](04-testing-validation/integration-test-report.md) |
+| Integration testing | [Integration test report](04-testing-validation/integration-test-report.md) and [retrospective coverage register](04-testing-validation/reconstructed-integration-test-register.md) |
 | Screenshots and audit traceability | [Evidence matrix](04-testing-validation/evidence-traceability-matrix.md) |
 | AI assistance and my validation | [AI contribution disclosure](05-ai-contribution/ai-assistance-and-human-validation.md) |
 
