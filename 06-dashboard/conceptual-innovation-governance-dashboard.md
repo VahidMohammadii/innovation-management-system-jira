@@ -4,14 +4,14 @@ I designed this management-information blueprint for my simulated Innovation Imp
 
 ## 1. Implemented and validated dashboard
 
-On 16 October 2026, I reviewed the final six-gadget **Innovation Implementation Governance Dashboard** in Jira (`/jira/dashboards/10001`). The management scope is limited to the three core gates: IIR-33 (Gate 1), IIR-35 (Gate 2) and IIR-36 (Gate 3). I excluded test issues IIR-34 and IIR-37 from the core management statistics.
+On 16 October 2026, I reviewed the final six-gadget **Innovation Implementation Governance Dashboard** in Jira (`/jira/dashboards/10001`). The management scope is limited to the three core gates: Concept Design Review — Gate 1 (IIR-33) (Gate 1), Prototype Validation Review — Gate 2 (IIR-35) (Gate 2) and Concept Acceptance Review — Gate 3 (IIR-36) (Gate 3). I excluded test issues test gate (IIR-34) and test decision gate (IIR-37) from the core management statistics.
 
 | Implemented gadget | Management question | Validated snapshot |
 | --- | --- | --- |
-| Core Innovation Gates — Filter Results | What is each gate's decision, approval and workflow state? | Three gates: IIR-33 Done / Go / Approved; IIR-35 In Progress / Go / Returned for Revision; IIR-36 To Do / Go / Returned for Revision |
+| Core Innovation Gates — Filter Results | What is each gate's decision, approval and workflow state? | Three gates: Concept Design Review — Gate 1 (IIR-33) Done / Go / Approved; Prototype Validation Review — Gate 2 (IIR-35) In Progress / Go / Returned for Revision; Concept Acceptance Review — Gate 3 (IIR-36) To Do / Go / Returned for Revision |
 | Two Dimensional Filter Statistics | How do approval and gate decisions intersect? | Approved + Go: 1; Returned for Revision + Go: 2; total 3 |
-| Governance Action Required — Filter Results | Which gates require governance action? | IIR-35 and IIR-36; total 2 |
-| Approved Innovation Gates — Filter Results | Which gates have Go and Approved together? | IIR-33 only; total 1 |
+| Governance Action Required — Filter Results | Which gates require governance action? | Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36); total 2 |
+| Approved Innovation Gates — Filter Results | Which gates have Go and Approved together? | Concept Design Review — Gate 1 (IIR-33) only; total 1 |
 | Gate Recommendation — Pie Chart | What are the automated recommendations? | Pending Review: 2; Go Candidate: 1; total 3 |
 | Critical Innovation Risks — Filter Results | Which core gates have the critical-risk flag? | No matching core gates at the final refresh |
 
@@ -44,7 +44,7 @@ I also designed the following potential management views. They illustrate future
 
 | Conceptual extension | Management question | Source or constraint |
 | --- | --- | --- |
-| Stage progression overview | Where are IIR-1 through IIR-4 in the roadmap? | Stage work items and statuses; no dedicated validated stage-progression gadget |
+| Stage progression overview | Where are Design Concept (IIR-1) through Market Launch (IIR-4) in the roadmap? | Stage work items and statuses; no dedicated validated stage-progression gadget |
 | Portfolio-wide evidence completeness | Which gate decisions lack supporting evidence? | Evidence Status, Evidence Link, Decision Rationale and AUTO-07; Gate 1 evidence scenario tested, not an aggregated dashboard |
 | Blocked transition monitoring | Which Stage 2/3/4 transitions require intervention? | AUTO-04 v2, AUTO-05, AUTO-06; no validated cross-stage exception gadget |
 | Decision accountability and chronology | Who approved which decision, when and why? | Jira issue History and available governance fields; no universal dashboard or complete decision-owner dataset verified |
@@ -64,11 +64,11 @@ The arrows describe a suggested **management reading order**, not Jira automatio
 
 ## 4. Example: Gate 1 and Stage 2 control
 
-I used Gate 1 (IIR-33) and Stage 2 (IIR-2) to examine the interaction between evidence completeness (AUTO-07) and stage progression control (AUTO-04 v2). In the 16 October follow-up, an incomplete Gate 1 approval was returned for revision. After I populated the simulated evidence prerequisites and restored Go / Approved, the AUTO-04 v2 blocking condition did not match; I confirmed **IIR-2 remained In Review after refresh**. I do not equate this with a verified transition to In Progress. See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evidence.md) and [integration report](../04-testing-validation/integration-test-report.md).
+I used Gate 1 (IIR-33) and Stage 2 (IIR-2) to examine the interaction between evidence completeness (AUTO-07) and stage progression control (AUTO-04 v2). In the 16 October follow-up, an incomplete Gate 1 approval was returned for revision. After I populated the simulated evidence prerequisites and restored Go / Approved, the AUTO-04 v2 blocking condition did not match; I confirmed **Prototype & Test (IIR-2) remained In Review after refresh**. I do not equate this with a verified transition to In Progress. See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evidence.md) and [integration report](../04-testing-validation/integration-test-report.md).
 
 ## 5. Verification boundary and ownership
 
-I checked the final dashboard's six gadgets, the three-core-gate scope and cross-gadget totals. I tested the critical-risk saved filter with a reversible flag change on IIR-37 and restored its original value; the final dashboard's core-gate risk list correctly showed no matching items. I have not validated multi-user permissions, every future refresh scenario or the conceptual extensions.
+I checked the final dashboard's six gadgets, the three-core-gate scope and cross-gadget totals. I tested the critical-risk saved filter with a reversible flag change on test decision gate (IIR-37) and restored its original value; the final dashboard's core-gate risk list correctly showed no matching items. I have not validated multi-user permissions, every future refresh scenario or the conceptual extensions.
 
 I used AI to support information architecture, JQL troubleshooting, validation planning and documentation. I configured Jira, executed checks, reviewed the screenshots and retain responsibility for the conclusions.
 
