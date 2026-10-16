@@ -84,7 +84,7 @@ I configured the Jira rules, executed tests, inspected results and retained resp
 
 I treat AI-generated recommendations as decision-support outputs rather than substitutes for managerial accountability.
 
-I separately retested AUTO-04 v2 on 16 October 2026. After correcting incomplete Gate 1 evidence, I observed the blocking condition not matched and confirmed IIR-2 remained **In Review** after refresh. I distinguish this from the nine integration tests recorded on 15 October 2026. See [AUTO-04 v2 audit](../assets/evidence/EVID-24-AUTO-04-v2-Audit-History.png), [Gate 1 configuration](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png), and [test C condition](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png). I have not independently reconciled every original test to its screenshot.
+I separately retested AUTO-04 v2. After correcting incomplete Gate 1 evidence, I observed the blocking condition not matched and confirmed IIR-2 remained "In Review" after refresh. I distinguish this from the nine integration tests recorded on 15 October 2026. See [AUTO-04 v2 audit](../assets/evidence/EVID-24-AUTO-04-v2-Audit-History.png), [Gate 1 configuration](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png), and [test C condition](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png). I have not independently reconciled every original test to its screenshot.
 
 ## 7. Portfolio Evidence
 
