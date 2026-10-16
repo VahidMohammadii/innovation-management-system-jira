@@ -7,4 +7,4 @@ I configured and validated a Jira Cloud **Innovation Implementation Governance D
 
 I tested the critical-risk filter with a reversible change on IIR-37, then restored the original value. The final management view uses core-gate-only filters.
 
-**Evidence publication:** I selected two final screenshots (overall view and readable decision detail). I will add them to `assets/evidence/` after uploading and checking the exact image files. The dashboard is a portfolio simulation, not an enterprise deployment.
+**Evidence publication:** I uploaded two selected screenshots to `assets/evidence/` on `main`: the [dashboard overview](../assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png) and [decision matrix detail](../assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png). The dashboard is a portfolio simulation, not an enterprise deployment.
