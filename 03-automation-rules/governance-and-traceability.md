@@ -2,15 +2,15 @@
 
 ## 1. Purpose
 
-This document describes the governance controls, decision traceability mechanisms, and automated validation procedures implemented in the Innovation Implementation Roadmap Jira portfolio project.
+I describe the governance controls, decision traceability mechanisms, and automated validation procedures implemented in the Innovation Implementation Roadmap Jira portfolio project.
 
-The project is a simulated organizational implementation designed to demonstrate innovation management, Jira workflow automation, and evidence-based decision governance.
+I designed this simulated organizational implementation to demonstrate innovation management, Jira workflow automation, and evidence-based decision governance.
 
 ## 2. Governance Architecture
 
-The innovation management system follows a stage-gate approach. Each stage represents a phase of innovation development, while decision gates provide formal review and approval checkpoints.
+I structured the innovation management system around a stage-gate approach. Each stage represents a phase of innovation development, while decision gates provide formal review and approval checkpoints.
 
-The governance framework is designed to ensure:
+I designed the governance framework to ensure:
 
 - Evidence-based decision-making
 - Clear management accountability
@@ -29,12 +29,13 @@ The governance framework is designed to ensure:
 | AUTO-05 | Control progression into Stage 3 |
 | AUTO-06 | Control progression into Stage 4 |
 | AUTO-07 | Validate evidence completeness before governance approval |
+| AUTO-08 | Reset stale gate recommendations to Pending Review when the weighted score is missing |
 
-These automation rules support decision-making and enforce selected governance requirements. Final management decisions remain subject to human review and approval.
+I use these automation rules to support decision-making and enforce selected governance requirements. Final management decisions remain subject to human review and approval.
 
 ## 4. Decision Traceability
 
-Jira provides multiple complementary mechanisms for tracking governance decisions.
+I use multiple Jira mechanisms for tracking governance decisions.
 
 ### 4.1 Work Item History
 
@@ -63,7 +64,7 @@ AUTO-07 additionally checks evidence completeness and returns incomplete approva
 
 ## 5. Validation and Testing
 
-The governance controls were evaluated using simulated Jira work items and controlled test scenarios.
+I evaluated the governance controls using simulated Jira work items and controlled test scenarios.
 
 Testing included:
 
@@ -77,21 +78,23 @@ The available evidence supports the tested scenarios; it does not establish prod
 
 ## 6. Human Oversight and AI Assistance
 
-AI assistance was used to support workflow planning, rule design, troubleshooting, test-case formulation, and documentation.
+I used AI assistance to support workflow planning, rule design, troubleshooting, test-case formulation, and documentation.
 
-Configuration, execution, result inspection, and final acceptance of the Jira workflows were performed through human review.
+I configured the Jira rules, executed tests, inspected results and retained responsibility for final acceptance.
 
-AI-generated recommendations are treated as decision-support outputs rather than substitutes for managerial accountability.
+I treat AI-generated recommendations as decision-support outputs rather than substitutes for managerial accountability.
+
+I separately retested AUTO-04 v2 on 16 October 2026. After correcting incomplete Gate 1 evidence, I observed the blocking condition not matched and confirmed IIR-2 remained **In Review** after refresh. I distinguish this from the nine integration tests recorded on 15 October 2026. See [AUTO-04 v2 audit](../assets/evidence/EVID-24-AUTO-04-v2-Audit-History.png), [Gate 1 configuration](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png), and [test C condition](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png). I have not independently reconciled every original test to its screenshot.
 
 ## 7. Portfolio Evidence
 
-Supporting screenshots and test evidence are maintained in the repository's `assets/evidence/` directory.
+I maintain supporting screenshots and test evidence in the repository's `assets/evidence/` directory.
 
 These artifacts demonstrate the behavior of the simulated governance controls and provide a basis for reviewing the implementation.
 
 ## 8. Limitations and Future Improvements
 
-The implementation is a portfolio simulation rather than a production organizational deployment.
+I implemented a portfolio simulation rather than a production organizational deployment.
 
 Potential improvements include:
 
@@ -103,6 +106,6 @@ Potential improvements include:
 
 ## 9. Conclusion
 
-The project demonstrates how a structured innovation governance framework can be operationalized using Jira work items, custom fields, automation rules, decision gates, and audit mechanisms.
+I demonstrate how a structured innovation governance framework can be operationalized using Jira work items, custom fields, automation rules, decision gates, and audit mechanisms.
 
-It combines innovation management principles with practical workflow configuration and documented human oversight.
+I combine innovation management principles with practical workflow configuration and documented human oversight.
