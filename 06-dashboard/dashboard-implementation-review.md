@@ -1,30 +1,77 @@
-# Jira Innovation Governance Dashboard — Implementation Review
+# Jira Innovation Governance Dashboard — Final Implementation Review
 
-I previously configured a real Jira Cloud dashboard for my simulated Innovation Implementation Roadmap. I reviewed three screenshots captured on 16 October 2026 showing the dashboard at `/jira/dashboards/10001`. These screenshots were supplied during the portfolio review but **have not yet been uploaded to this repository as evidence assets**.
+I designed, configured and validated an **implemented Jira Cloud dashboard** for my simulated Innovation Implementation Roadmap. My final dashboard is available in my Jira environment at `/jira/dashboards/10001`. I reviewed the final layout on 16 October 2026.
 
-## Observed dashboard components
+## Scope and management purpose
 
-| Gadget / view | Observed output | Verification boundary |
+I designed the final employer-facing dashboard around **three core governance gates**: IIR-33 (Gate 1 — Concept Design Review), IIR-35 (Gate 2 — Prototype Validation Review) and IIR-36 (Gate 3 — Concept Acceptance Review). I retained IIR-34 and IIR-37 as test issues in Jira but excluded them from the core management view. I preserved the broader saved filter `IIR | All Innovation Decision Gates` for test traceability.
+
+## Final dashboard — six gadgets
+
+| Gadget | Filter / grouping | Verified snapshot |
 | --- | --- | --- |
-| Pie Chart — IIR All Innovation Decision Gates | Gate Recommendation: Pending Review 3, Go Candidate 1, Revise Candidate 1; total 5 | Snapshot only; not a live KPI claim |
-| Two Dimensional Filter Statistics | Governance Review Status × Gate Decision: Approved/Go 2, Approved/None 1, Returned for Revision/Go 2; total 5 | The display's status and decision dimensions must not be conflated |
-| Filter Results — IIR Approved Innovation Gates | IIR-33 and IIR-34, both Go / Approved | IIR-34 is a test governance issue; approval does not imply completed workflow status |
-| Filter Results — IIR All Innovation Decision Gates | IIR-33, IIR-34, IIR-35, IIR-36, IIR-37; five rows | IIR-34 and IIR-37 are test issues, not additional production-model stage gates |
-| Filter Results — IIR Critical Innovation Risks | No matching issues at screenshot time | Empty results do not prove absence of all organizational risks |
-| Filter Results — IIR Gates Under Review | No matching issues at screenshot time | Requires inspection of saved JQL to interpret |
+| Core Innovation Gates — Filter Results | `IIR | Core Innovation Gates` | IIR-33 Done / Go / Approved; IIR-35 In Progress / Go / Returned for Revision; IIR-36 To Do / Go / Returned for Revision |
+| Two Dimensional Filter Statistics | `IIR | Core Innovation Gates`; Governance Review Status × Gate Decision | Approved / Go: 1; Returned for Revision / Go: 2; total 3 |
+| Governance Action Required — Filter Results | `IIR | Governance Action Required` | IIR-35 and IIR-36; total 2 |
+| Approved Innovation Gates — Filter Results | `IIR | Approved Innovation Gates` | IIR-33 only; total 1 |
+| Gate Recommendation — Pie Chart | `IIR | Core Innovation Gates`; Gate Recommendation | Pending Review: 2; Go Candidate: 1; total 3 |
+| Critical Innovation Risks — Filter Results | `IIR | Critical Innovation Risks` | No matching core gate at final refresh |
 
-## Relationship to the conceptual architecture
+These are **snapshot results**, not organization-wide metrics or a claim of production impact. A recorded `Go` decision is distinct from governance approval and workflow completion. A zero critical-risk result means only that no **core gate** matched the configured risk flag at the time of refresh.
 
-My conceptual Stage-Gate model has **three core governance gates**: IIR-33 (Gate 1), IIR-35 (Gate 2), and IIR-36 (Gate 3). The dashboard's five-item decision-gate filter additionally includes **IIR-34 and IIR-37 as test issues**. The dashboard is therefore a broader operational/test monitoring view, not a direct one-to-one picture of three core gates.
+## Saved JQL and scope
 
-The [conceptual dashboard blueprint](conceptual-innovation-governance-dashboard.md) is a **design abstraction** of management questions and possible future panels. The existing Jira dashboard is **implemented**, but not every panel in that blueprint is verified as deployed. In particular, I have not verified a dedicated Stage Progression gadget or a comprehensive evidence-completeness dashboard panel.
+**Core Innovation Gates**
 
-## Remaining verification before calling the dashboard fully validated
+```jql
+project = IIR
+AND key in (IIR-33, IIR-35, IIR-36)
+ORDER BY created ASC
+```
 
-1. Inspect and record each saved filter's actual JQL and sharing permissions.
-2. Reconcile gadget output against current source Jira issues and their governance fields.
-3. Confirm refresh behavior and assess whether any saved filters unintentionally include test issues.
-4. Add privacy-reviewed screenshots to `assets/evidence`, link them here, and record the date of capture.
-5. Distinguish empty exception queues from tested exception-detection logic.
+**Governance Action Required**
 
-I used AI to help review the screenshots and reconcile the written portfolio narrative. I configured the Jira dashboard and retain responsibility for verifying the underlying filters and outcomes.
+```jql
+project = IIR
+AND key in (IIR-33, IIR-35, IIR-36)
+AND "Governance Review Status" in ("Under Review", "Returned for Revision")
+ORDER BY updated DESC
+```
+
+**Approved Innovation Gates**
+
+```jql
+project = IIR
+AND key in (IIR-33, IIR-35, IIR-36)
+AND "Gate Decision" = "Go"
+AND "Governance Review Status" = "Approved"
+ORDER BY updated DESC
+```
+
+**Critical Innovation Risks**
+
+```jql
+project = IIR
+AND key in (IIR-33, IIR-35, IIR-36)
+AND "Critical Risk Flag" = "Critical Risk Identified"
+ORDER BY updated DESC
+```
+
+I also retained `IIR | Gates Under Review` as a saved filter but removed its redundant gadget. I did not delete the historical five-item filter or test issues.
+
+## Verification performed
+
+1. I checked that the core-gate JQL returned IIR-33, IIR-35 and IIR-36 only.
+2. I compared the three-row detail gadget with the decision matrix, approval list, action queue and pie-chart totals.
+3. I tested the critical-risk filter using test issue IIR-37: `No Critical Risk` → `Critical Risk Identified` → `No Critical Risk`. The filter returned 0 → 1 → 0 matching issues. I subsequently confirmed that the dashboard risk gadget returned zero after refresh.
+4. I checked the final six-gadget layout and removed the redundant `Gates Under Review` gadget and the five-item test-inclusive table from the employer-facing dashboard.
+
+**Verification boundaries:** I did not independently test every future automation-triggered update, every permission scenario or a production organization's risk coverage. The positive risk test verified the saved filter with a test issue; the final core-only gadget correctly excluded that issue. All listed counts are from the observed Jira simulation.
+
+## Selected visual evidence
+
+I selected only two images for the final portfolio: a full six-gadget overview (`DASH-01-Innovation-Governance-Dashboard-Overview.png`) and a readable core-gate decision detail (`DASH-02-Core-Gates-and-Decision-Matrix.png`). **These image files are not yet committed in this review branch.** I will place them under `assets/evidence/` and add working links before merging this documentation into `main`.
+
+## AI contribution and accountability
+
+I used AI to support dashboard design review, JQL troubleshooting, validation planning and documentation. I personally configured the Jira dashboard, performed the controlled test, reviewed the results and remain responsible for the conclusions.
