@@ -1,8 +1,10 @@
 # Innovation Governance Dashboard
 
-I previously configured an **operational Jira Cloud governance dashboard** for the simulated IIR project. I reviewed screenshots showing a Gate Recommendation pie chart, two-dimensional governance statistics, approved gates, all decision gates and exception queues.
+I configured and validated a Jira Cloud **Innovation Implementation Governance Dashboard** for my simulated Innovation Implementation Roadmap. The employer-facing view uses **three core decision gates** (IIR-33, IIR-35 and IIR-36), excluding test issues IIR-34 and IIR-37 from management statistics.
 
-- [Implemented dashboard review](dashboard-implementation-review.md) — screenshot-grounded components, five monitored decision items and remaining validation checks.
-- [Conceptual dashboard blueprint](conceptual-innovation-governance-dashboard.md) — the management-oriented design abstraction; some proposed panels are not verified as implemented.
+- [Implemented dashboard and validation](dashboard-implementation-review.md) — six gadgets, verified outputs, JQL scope and test boundaries.
+- [Conceptual dashboard blueprint](conceptual-innovation-governance-dashboard.md) — a broader management information architecture; not every proposed panel was implemented.
 
-**Verification boundary:** The dashboard exists and multiple gadgets display Jira data. Saved JQL, permissions, all proposed panels and refresh behavior still require detailed reconciliation.
+I tested the critical-risk filter with a reversible change on IIR-37, then restored the original value. The final management view uses core-gate-only filters.
+
+**Evidence publication:** I uploaded two selected screenshots to `assets/evidence/` on `main`: the [dashboard overview](../assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png) and [decision matrix detail](../assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png). The dashboard is a portfolio simulation, not an enterprise deployment.
