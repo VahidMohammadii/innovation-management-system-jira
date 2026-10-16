@@ -18,12 +18,12 @@ I configured and tested eight controls. This catalog describes their intended fu
 
 ## AUTO-04 v2 follow-up
 
-I tested blocked scenarios A/B and a permitted scenario C on 16 October 2026. The positive test initially failed when AUTO-07 reset IIR-33's governance approval due to incomplete evidence. I completed the simulated Gate 1 evidence record, set the required fields and retested. The AUTO-04 v2 blocking condition did not match and I confirmed IIR-2 remained **In Review** after refresh, rather than asserting it was In Progress.
+I tested blocked scenarios A/B and a permitted scenario C. The positive test initially failed when AUTO-07 reset IIR-33's governance approval due to incomplete evidence. I completed the simulated Gate 1 evidence record, set the required fields and retested. The AUTO-04 v2 blocking condition did not match and I confirmed IIR-2 remained **In Review** after refresh, rather than asserting it was In Progress.
 
 Evidence: [AUTO-04 v2 audit history](../assets/evidence/EVID-24-AUTO-04-v2-Audit-History.png), [Gate 1 configuration](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png), [Test C condition](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png).
 
 ## Verification standard and limitations
 
-I distinguish automation audit execution from a successful business-rule outcome. I inspect the resulting Jira issue fields and History as well as audit logs. I recorded nine passing integration tests on 15 October 2026; the AUTO-04 v2 follow-up is separate. Individual case-to-screenshot reconciliation and reinspection of exact enabled rule configurations remain outstanding.
+I distinguish automation audit execution from a successful business-rule outcome, inspect the resulting Jira issue fields and History as well as audit logs, and recorded nine passing integration tests; the AUTO-04 v2 follow-up is separate. Individual case-to-screenshot reconciliation and reinspection of exact enabled rule configurations remain outstanding.
 
-I used AI for rule-design options, troubleshooting, edge-case analysis and documentation. I configured the rules, executed tests, inspected evidence and made the final decisions. This is a portfolio simulation, not a production deployment.
+I used AI for rule-design options, troubleshooting, edge-case analysis and documentation and configured the rules, executed tests, inspected evidence and made the final decisions. This is a portfolio simulation, not a production deployment.
