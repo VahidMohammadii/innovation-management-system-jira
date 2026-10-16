@@ -2,6 +2,24 @@
 
 I designed, configured, tested and documented a **simulated organizational innovation management system** in Jira Cloud. This portfolio case study demonstrates innovation governance, Jira project management, and responsible AI-assisted workflows. It is **not** a live enterprise deployment or proof of measured business impact.
 
+## Project overview
+
+I designed and implemented a **simulated Stage-Gate innovation management system** in Jira Cloud to show how organizations can structure innovation evaluation, governance approvals, evidence requirements and progression between development stages.
+
+**The challenge:** Innovation initiatives need transparent evaluation criteria, clear decision ownership and auditable controls before moving to the next stage.
+
+**My solution:** I translated these governance requirements into Jira work items, weighted gate scoring, decision recommendations, evidence-completeness checks and eight automation controls (AUTO-01–AUTO-08). I documented integration tests and corrective troubleshooting with repository evidence.
+
+### Key competencies demonstrated
+
+| Competency | What I implemented or documented |
+| --- | --- |
+| **Innovation management** | Stage-Gate architecture, evaluation criteria, governance reviews and decision traceability |
+| **Jira workflow and project management** | Eight automation controls, stage progression safeguards, audit and issue History analysis |
+| **Practical AI-assisted problem solving** | AI-supported rule design, debugging, test planning and documentation, with my direct configuration and validation |
+
+**Project type:** Independently developed portfolio simulation. I do not claim a production deployment, measured business impact or complete independent audit of the nine historical test executions.
+
 ## Explore my work
 
 | Area | Documentation |
