@@ -19,7 +19,7 @@ I implemented weighted gate scoring, decision recommendations, governance review
 
 ## Evidence and limitations
 
-I maintain screenshots in [assets/evidence](assets/evidence/) and distinguish owner-confirmed images from screenshots still awaiting direct content and privacy review. The nine original tests still require complete case-by-case reconciliation with timestamps, inputs and expected/actual outcomes. This repository is a transparent professional portfolio simulation, not a production certification.
+I maintain screenshots in [assets/evidence](assets/evidence/) and have checked their content. Detailed case-level reconciliation and privacy review remain separate release checks. The nine original tests still require complete case-by-case reconciliation with timestamps, inputs and expected/actual outcomes. This repository is a transparent professional portfolio simulation, not a production certification.
 
 ## AI disclosure
 
