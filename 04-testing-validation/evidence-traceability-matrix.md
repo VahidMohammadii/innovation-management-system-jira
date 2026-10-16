@@ -2,7 +2,7 @@
 
 **Status:** Screenshot content and publication privacy reviewed by me; detailed case-level reconciliation pending.
 
-I use this register to distinguish a screenshot filename from independently verified proof of a specific outcome. The GitHub directory listing contains the following 25 images. EVID-24, EVID-25 and EVID-26 were opened and confirmed by me on 16 October 2026; I have now checked the content of the other listed images as well. I also reviewed all 25 images for privacy and confidentiality concerns and approved them for public portfolio use. This is my publication review, not an independent security certification.
+I use this register to distinguish a screenshot filename from independently verified proof of a specific outcome. The GitHub directory listing contains the following 25 images. I also reviewed all 25 images for privacy and confidentiality concerns and approved them for public portfolio use. This is my publication review, not an independent security certification.
 
 | Evidence | Rule / subject | Review |
 | --- | --- | --- |
