@@ -74,7 +74,7 @@ I maintain Jira audit logs, issue History and screenshots in [the evidence trace
 
 I checked the content of all 25 listed screenshots on 16 October 2026. Detailed case-level reconciliation and privacy review remain outstanding.
 
-**Evidence review checklist:** Match each screenshot to a named test, confirm expected versus actual field values, and check that any private account information or unnecessary URLs are redacted.
+**Evidence review checklist:** I confirmed the screenshot content. Before final release I will reconcile each of the nine original test cases to inputs, expected/actual outputs and timestamps, and complete a separate privacy review.
 
 ## 6. AI contribution and human validation
 
@@ -90,9 +90,9 @@ AI assistance supported rule design, edge-case identification, test-case draftin
 ## 8. Release readiness and next steps
 
 1. Reconcile the nine test cases with their input data, expected result, actual result, Jira issue, audit timestamp, and screenshot filename.
-2. Replace every placeholder link and verify links render correctly in GitHub.
-3. Add a README section linking to this report and the governance-and-traceability documentation.
-4. Publish a concise AI-assistance and human-review disclosure.
+2. Verify the linked screenshots render correctly in GitHub; placeholder paths have already been replaced.
+3. Maintain the README links to this report and the governance-and-traceability documentation; both are already linked.
+4. Maintain the published AI-assistance and human-review disclosure in the proposed branch.
 5. Conduct a final repository audit for consistency, reproducibility, and privacy.
 
 **Provisional conclusion:** I recorded passing integration tests; the complete case-level evidence and privacy audit remains open.
