@@ -4,7 +4,7 @@ I designed this management-information blueprint for my simulated Innovation Imp
 
 ## 1. Implemented and validated dashboard
 
-On 16 October 2026, I reviewed the final six-gadget **Innovation Implementation Governance Dashboard** in Jira (`/jira/dashboards/10001`). The management scope is limited to the three core gates: Concept Design Review — Gate 1 (IIR-33) (Gate 1), Prototype Validation Review — Gate 2 (IIR-35) (Gate 2) and Concept Acceptance Review — Gate 3 (IIR-36) (Gate 3). I excluded test issues test gate (IIR-34) and test decision gate (IIR-37) from the core management statistics.
+On 16 October 2026, I reviewed the final six-gadget **Innovation Implementation Governance Dashboard** in Jira (`/jira/dashboards/10001`). The management scope is limited to the three core gates: Concept Design Review — Gate 1 (IIR-33), Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36). I excluded test issues test gate (IIR-34) and test decision gate (IIR-37) from the core management statistics.
 
 | Implemented gadget | Management question | Validated snapshot |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ The [final dashboard implementation review](dashboard-implementation-review.md) 
 
 ```mermaid
 flowchart LR
-    G["Core decision gates<br/>IIR-33, IIR-35, IIR-36"] --> F["Saved Jira filters<br/>Core Gates / Action Required<br/>Approved Gates / Critical Risks"]
+    G["Core decision gates<br/>Concept Design Review (IIR-33)<br/>Prototype Validation Review (IIR-35)<br/>Concept Acceptance Review (IIR-36)"] --> F["Saved Jira filters<br/>Core Gates / Action Required<br/>Approved Gates / Critical Risks"]
     A["Automation AUTO-01–AUTO-08<br/>and governance fields"] --> G
     F --> D["Implemented six-gadget dashboard<br/>detail / decision matrix / action queue<br/>approval list / recommendations / risk list"]
     D -. "Investigate a gate" .-> H["Jira issue details, History<br/>and Automation Audit"]
@@ -53,7 +53,7 @@ I also designed the following potential management views. They illustrate future
 
 ```mermaid
 flowchart TB
-    ROADMAP["Conceptual extension: stage progression<br/>IIR-1 → IIR-2 → IIR-3 → IIR-4"]
+    ROADMAP["Conceptual extension: stage progression<br/>Design Concept (IIR-1) → Prototype & Test (IIR-2)<br/>Concept Acceptance (IIR-3) → Market Launch (IIR-4)"]
     GATES["Implemented: three-gate detail<br/>approval matrix and recommendation chart"]
     ACTION["Implemented: governance action queue<br/>approved-gate list and critical-risk list"]
     FUTURE["Conceptual extensions only:<br/>evidence completeness / blocked transitions<br/>accountability / automation trends"]
@@ -64,7 +64,7 @@ The arrows describe a suggested **management reading order**, not Jira automatio
 
 ## 4. Example: Gate 1 and Stage 2 control
 
-I used Gate 1 (IIR-33) and Stage 2 (IIR-2) to examine the interaction between evidence completeness (AUTO-07) and stage progression control (AUTO-04 v2). In the 16 October follow-up, an incomplete Gate 1 approval was returned for revision. After I populated the simulated evidence prerequisites and restored Go / Approved, the AUTO-04 v2 blocking condition did not match; I confirmed **Prototype & Test (IIR-2) remained In Review after refresh**. I do not equate this with a verified transition to In Progress. See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evidence.md) and [integration report](../04-testing-validation/integration-test-report.md).
+I used Concept Design Review — Gate 1 (IIR-33) and Prototype & Test — Stage 2 (IIR-2) to examine the interaction between evidence completeness (AUTO-07) and stage progression control (AUTO-04 v2). In the 16 October follow-up, an incomplete Gate 1 approval was returned for revision. After I populated the simulated evidence prerequisites and restored Go / Approved, the AUTO-04 v2 blocking condition did not match; I confirmed **Prototype & Test (IIR-2) remained In Review after refresh**. I do not equate this with a verified transition to In Progress. See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evidence.md) and [integration report](../04-testing-validation/integration-test-report.md).
 
 ## 5. Verification boundary and ownership
 
