@@ -72,7 +72,7 @@ I maintain Jira audit logs, issue History and screenshots in [the evidence trace
 - [Gate 1 approved configuration](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png)
 - [AUTO-04 v2 test C condition](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png)
 
-I opened and confirmed EVID-24–26 on 16 October 2026. The content and privacy review of the other screenshots remains outstanding.
+I checked the content of all 25 listed screenshots on 16 October 2026. Detailed case-level reconciliation and privacy review remain outstanding.
 
 **Evidence review checklist:** Match each screenshot to a named test, confirm expected versus actual field values, and check that any private account information or unnecessary URLs are redacted.
 
