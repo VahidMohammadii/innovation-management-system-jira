@@ -4,16 +4,16 @@ I designed, configured and validated an **implemented Jira Cloud dashboard** for
 
 ## Scope and management purpose
 
-I designed the final employer-facing dashboard around **three core governance gates**: IIR-33 (Gate 1 — Concept Design Review), IIR-35 (Gate 2 — Prototype Validation Review) and IIR-36 (Gate 3 — Concept Acceptance Review). I retained IIR-34 and IIR-37 as test issues in Jira but excluded them from the core management view. I preserved the broader saved filter `IIR | All Innovation Decision Gates` for test traceability.
+I designed the final employer-facing dashboard around **three core governance gates**: Concept Design Review — Gate 1 (IIR-33) (Gate 1 — Concept Design Review), Prototype Validation Review — Gate 2 (IIR-35) (Gate 2 — Prototype Validation Review) and Concept Acceptance Review — Gate 3 (IIR-36) (Gate 3 — Concept Acceptance Review). I retained test gate (IIR-34) and test decision gate (IIR-37) as test issues in Jira but excluded them from the core management view. I preserved the broader saved filter `IIR | All Innovation Decision Gates` for test traceability.
 
 ## Final dashboard — six gadgets
 
 | Gadget | Filter / grouping | Verified snapshot |
 | --- | --- | --- |
-| Core Innovation Gates — Filter Results | `IIR | Core Innovation Gates` | IIR-33 Done / Go / Approved; IIR-35 In Progress / Go / Returned for Revision; IIR-36 To Do / Go / Returned for Revision |
+| Core Innovation Gates — Filter Results | `IIR | Core Innovation Gates` | Concept Design Review — Gate 1 (IIR-33) Done / Go / Approved; Prototype Validation Review — Gate 2 (IIR-35) In Progress / Go / Returned for Revision; Concept Acceptance Review — Gate 3 (IIR-36) To Do / Go / Returned for Revision |
 | Two Dimensional Filter Statistics | `IIR | Core Innovation Gates`; Governance Review Status × Gate Decision | Approved / Go: 1; Returned for Revision / Go: 2; total 3 |
-| Governance Action Required — Filter Results | `IIR | Governance Action Required` | IIR-35 and IIR-36; total 2 |
-| Approved Innovation Gates — Filter Results | `IIR | Approved Innovation Gates` | IIR-33 only; total 1 |
+| Governance Action Required — Filter Results | `IIR | Governance Action Required` | Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36); total 2 |
+| Approved Innovation Gates — Filter Results | `IIR | Approved Innovation Gates` | Concept Design Review — Gate 1 (IIR-33) only; total 1 |
 | Gate Recommendation — Pie Chart | `IIR | Core Innovation Gates`; Gate Recommendation | Pending Review: 2; Go Candidate: 1; total 3 |
 | Critical Innovation Risks — Filter Results | `IIR | Critical Innovation Risks` | No matching core gate at final refresh |
 
@@ -61,9 +61,9 @@ I also retained `IIR | Gates Under Review` as a saved filter but removed its red
 
 ## Verification performed
 
-1. I checked that the core-gate JQL returned IIR-33, IIR-35 and IIR-36 only.
+1. I checked that the core-gate JQL returned Concept Design Review — Gate 1 (IIR-33), Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36) only.
 2. I compared the three-row detail gadget with the decision matrix, approval list, action queue and pie-chart totals.
-3. I tested the critical-risk filter using test issue IIR-37: `No Critical Risk` → `Critical Risk Identified` → `No Critical Risk`. The filter returned 0 → 1 → 0 matching issues. I subsequently confirmed that the dashboard risk gadget returned zero after refresh.
+3. I tested the critical-risk filter using test issue test decision gate (IIR-37): `No Critical Risk` → `Critical Risk Identified` → `No Critical Risk`. The filter returned 0 → 1 → 0 matching issues. I subsequently confirmed that the dashboard risk gadget returned zero after refresh.
 4. I checked the final six-gadget layout and removed the redundant `Gates Under Review` gadget and the five-item test-inclusive table from the employer-facing dashboard.
 
 **Verification boundaries:** I did not independently test every future automation-triggered update, every permission scenario or a production organization's risk coverage. The positive risk test verified the saved filter with a test issue; the final core-only gadget correctly excluded that issue. All listed counts are from the observed Jira simulation.
