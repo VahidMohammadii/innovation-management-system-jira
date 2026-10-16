@@ -2,7 +2,7 @@
 
 I designed this **conceptual dashboard blueprint** to explain how a manager could monitor the simulated Innovation Implementation Roadmap (IIR) governance system through Jira. It connects the four documented stages, three decision gates, evidence requirements and eight automation controls to decision-oriented dashboard views.
 
-**Implementation boundary:** This is a proposed information architecture, **not a screenshot, Jira dashboard configuration export, live data feed or verified deployed dashboard**. The repository currently documents workflow automation and testing, not a completed dashboard implementation. I intentionally show **no invented counts, percentages, KPIs or trend values**.
+**Implementation boundary:** This file is a proposed information architecture, **not a screenshot or exact export of the live dashboard**. I have also configured an [existing Jira governance dashboard](dashboard-implementation-review.md), whose observed gadgets overlap with—but do not implement every panel of—this blueprint. I intentionally show **no invented counts, percentages, KPIs or trend values**.
 
 ## 1. Proposed management dashboard layout
 
@@ -67,7 +67,7 @@ flowchart LR
     class FILTER,DASH proposed
 ```
 
-This is a **proposed data flow**. I have not verified the availability of each field in a particular Jira dashboard gadget, created JQL filters, connected gadgets or tested dashboard refresh behavior. Jira History and Automation Audit should be inspected in their appropriate Jira views rather than assumed to be natively embedded as live dashboard gadgets.
+This is a **proposed data flow**. I have observed connected Jira dashboard gadgets and saved-filter-based views, but I have not yet reconciled their exact JQL, field availability, sharing permissions or dashboard refresh behavior. Jira History and Automation Audit should be inspected in their appropriate Jira views rather than assumed to be natively embedded as live dashboard gadgets.
 
 ## 3. Dashboard panel specification
 
@@ -81,7 +81,7 @@ This is a **proposed data flow**. I have not verified the availability of each f
 | Governance accountability | Who approved what, why and when? | Gate Decision, Governance Review Status, Decision Rationale, Review Date, Decision Owner (where available), Jira History | Field availability varies; no universal completed record claimed |
 | Automation exceptions | What needs technical follow-up? | Automation Audit and issue History, including mismatched conditions | Evidence available; dashboard integration not implemented |
 
-I do **not** claim that these panels already exist in Jira or that a management KPI has been calculated. This specification is intended to make the future dashboard testable.
+Some comparable panels **do exist** in the implemented Jira dashboard; I do **not** claim every proposed panel exists or that an independently validated management KPI has been calculated. This specification is intended to make the future dashboard testable.
 
 ## 4. Example management reading path — documented Gate 1 scenario
 
@@ -104,7 +104,7 @@ See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evide
 | 5 | Test a changed gate decision and an incomplete-evidence case | Views refresh appropriately and lead to correct issue records |
 | 6 | Capture screenshots, privacy-review them and add an evidence register | Dashboard implementation is demonstrable and auditable |
 
-These are **future implementation steps**, not completed project achievements.
+These are **remaining verification and extension steps**, not claims that the existing dashboard must be rebuilt.
 
 ## 6. Related documentation and accountability
 

@@ -1,7 +1,8 @@
 # Innovation Governance Dashboard
 
-I designed a [conceptual dashboard blueprint](conceptual-innovation-governance-dashboard.md) to illustrate how a manager could inspect stage progression, gate readiness, evidence completeness, exceptions and decision accountability.
+I previously configured an **operational Jira Cloud governance dashboard** for the simulated IIR project. I reviewed screenshots showing a Gate Recommendation pie chart, two-dimensional governance statistics, approved gates, all decision gates and exception queues.
 
-The blueprint includes a Mermaid dashboard wireframe, proposed data flow, panel specification and future Jira implementation acceptance criteria.
+- [Implemented dashboard review](dashboard-implementation-review.md) — screenshot-grounded components, five monitored decision items and remaining validation checks.
+- [Conceptual dashboard blueprint](conceptual-innovation-governance-dashboard.md) — the management-oriented design abstraction; some proposed panels are not verified as implemented.
 
-**Scope:** This is a proposed dashboard design, not a deployed or validated Jira dashboard.
+**Verification boundary:** The dashboard exists and multiple gadgets display Jira data. Saved JQL, permissions, all proposed panels and refresh behavior still require detailed reconciliation.

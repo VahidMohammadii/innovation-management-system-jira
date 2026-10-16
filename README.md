@@ -25,6 +25,7 @@ I designed and implemented a **simulated Stage-Gate innovation management system
 | Area | Documentation |
 | --- | --- |
 | Conceptual Stage-Gate process map | [System flowchart](01-system-design/conceptual-stage-gate-flow.md) |
+| Implemented Innovation Governance Dashboard | [Observed dashboard and validation status](06-dashboard/dashboard-implementation-review.md) | 
 | Conceptual Innovation Governance Dashboard | [Dashboard blueprint](06-dashboard/conceptual-innovation-governance-dashboard.md) | 
 | Simulated Gate 1 design and evidence | [Gate 1 concept review](01-system-design/gate-1-concept-review-evidence.md) |
 | Automation rules AUTO-01–AUTO-08 | [Rule catalog](03-automation-rules/automation-rule-catalog.md) |
