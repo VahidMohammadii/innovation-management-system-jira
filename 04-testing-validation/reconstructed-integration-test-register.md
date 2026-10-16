@@ -27,3 +27,7 @@ I recorded nine passing integration tests on 15 October 2026, but I no longer ha
 | C: Concept Design Review — Gate 1 (IIR-33) Go / Approved and complete evidence | Do not roll back permitted transition | Blocking condition not matched; Prototype & Test (IIR-2) remained **In Review** after refresh | [Gate 1 fields](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png), [Test C](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png) |
 
 I used AI to help organize this retrospective register. I configured Jira, executed the tests, reviewed the evidence and retain responsibility for the findings. This portfolio simulation does not establish a production deployment or independent audit.
+
+## Subsequent verified cases (separate from historical reconstruction)
+
+On 16 October 2026, I separately verified a new AUTO-04 v2 permitted-path transition (TC-04, IIR-2 remained **In Progress** after a manual transition) and a new AUTO-01 weighted-score calculation (TC-01, expected and observed **3.85** on IIR-37). I recorded audit IDs and conditions in the [new follow-up register](verified-followup-tests-2026-10-16.md). These results **do not replace or validate** the missing original nine-case worksheet. New screenshot files are not yet in this repository.

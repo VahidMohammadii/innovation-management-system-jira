@@ -7,3 +7,7 @@ My [integration test report](integration-test-report.md) describes the scenarios
 I used AI for test design and troubleshooting, while I personally executed tests and assessed the results.
 
 I reconstructed known test coverage transparently in the [retrospective integration test register](reconstructed-integration-test-register.md). The coverage references are not original case IDs.
+
+## Verified new follow-up tests (16 October 2026)
+
+I separately verified [TC-04 (AUTO-04 v2 permitted progression) and TC-01 (AUTO-01 weighted scoring)](verified-followup-tests-2026-10-16.md) against new Jira audit logs, work-item fields and History. These are **two new tests**, not a reconstruction of the original nine. The new screenshots were shared for review but have not yet been uploaded to this repository; the follow-up register records their audit IDs and outstanding evidence-publication step. TC-02 and the remaining new cases are pending.

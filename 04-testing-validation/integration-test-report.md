@@ -2,13 +2,13 @@
 
 **Project:** Innovation Implementation Roadmap (IIR)  
 **Platform:** Jira Cloud automation  
-**Report status:** Owner-authored working report — case-level evidence reconciliation pending  
+**Report status:** Owner-authored working report — historical case-level reconciliation pending; new follow-up cases recorded separately  
 **Test environment:** Simulated organizational innovation governance workflow  
 **Test confirmation:** I recorded nine passing integration tests on 15 October 2026 and separately retested AUTO-04 v2 on 16 October 2026.
 
 ## 1. Executive summary
 
-This portfolio case study demonstrates an implementation of stage-gate innovation governance using Jira work items, custom fields, linked decision gates, automation rules, and audit trails. I completed and recorded nine passing integration tests on 15 October 2026. I subsequently retested AUTO-04 v2 after investigating its interaction with AUTO-07. I confirmed the Stage 2 issue Prototype & Test (IIR-2) remained **In Review** after refresh during the corrected positive scenario. I have not yet independently reconciled all original test cases to their individual evidence, and I do not claim production deployment.
+This portfolio case study demonstrates an implementation of stage-gate innovation governance using Jira work items, custom fields, linked decision gates, automation rules, and audit trails. I completed and recorded nine passing integration tests on 15 October 2026. I subsequently retested AUTO-04 v2 after investigating its interaction with AUTO-07. In an earlier permitted-condition check, Prototype & Test (IIR-2) remained **In Review**; a subsequent new transition test on 16 October confirmed the permitted path left IIR-2 **In Progress**. I have not yet independently reconciled all original test cases to their individual evidence, and I do not claim production deployment.
 
 ## 2. Scope and system components
 
@@ -43,7 +43,11 @@ For a transparent retrospective summary, see the [reconstructed integration test
 
 ### AUTO-04 v2 follow-up — 16 October 2026
 
-I separately retested blocked A/B scenarios and the permitted C scenario. An initial positive-path attempt was rolled back when AUTO-07 returned Concept Design Review — Gate 1 (IIR-33) to Returned for Revision due to incomplete evidence. I added the simulated Gate 1 evidence record, completed required fields and restored the controlled approval. In the corrected test, the AUTO-04 v2 blocking condition did not match; Prototype & Test (IIR-2) remained **In Review** after refresh. I do not describe the observed state as In Progress.
+I separately retested blocked A/B scenarios and the permitted C scenario. An initial positive-path attempt was rolled back when AUTO-07 returned Concept Design Review — Gate 1 (IIR-33) to Returned for Revision due to incomplete evidence. I added the simulated Gate 1 evidence record, completed required fields and restored the controlled approval. In the corrected test, the AUTO-04 v2 blocking condition did not match; Prototype & Test (IIR-2) remained **In Review** after refresh. That earlier observation is retained; the later, separately audited manual transition to **In Progress** is recorded in the [verified follow-up register](verified-followup-tests-2026-10-16.md).
+
+### Newly verified follow-up tests — 16 October 2026
+
+I verified **TC-04**: with Gate 1 Go/Approved, I manually transitioned IIR-2 to In Progress and confirmed AUTO-04 v2 did not roll it back (audit `24cb375d-daaa-4f0c-b5d3-2780e24dad1a`). I also verified **TC-01**: AUTO-01 calculated 3.85 from five known scoring inputs and updated IIR-37 (audit `9210e4a8-2e0f-464a-b712-16f91083b099`). The new screenshots were reviewed in the working session but are not yet stored in this repository. See [the new test register](verified-followup-tests-2026-10-16.md). These results do **not** retrospectively reconcile the original nine executions.
 
 ## 4. Defects found and resolutions
 

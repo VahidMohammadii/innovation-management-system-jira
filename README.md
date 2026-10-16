@@ -40,7 +40,7 @@ I configured and validated a six-gadget Jira governance dashboard focused on the
 
 ## Implementation and testing
 
-I implemented weighted gate scoring, decision recommendations, governance review and evidence checks, controlled stage transitions and safeguards for missing scores. I recorded nine passing integration tests on 15 October 2026, then separately retested AUTO-04 v2 on 16 October 2026. In the corrected positive-path scenario, I confirmed Stage 2 work item Prototype & Test (IIR-2) remained **In Review** after refresh. I distinguish Jira audit execution from observed business-rule outcomes.
+I implemented weighted gate scoring, decision recommendations, governance review and evidence checks, controlled stage transitions and safeguards for missing scores. I recorded nine passing integration tests on 15 October 2026, then separately retested AUTO-04 v2 on 16 October 2026. An earlier permitted-condition check left Prototype & Test (IIR-2) **In Review**; a later controlled manual transition verified that AUTO-04 v2 allowed the work item to remain **In Progress**. I also verified an AUTO-01 weighted score of **3.85** against its configured formula and Jira History. See [the new verified follow-up register](04-testing-validation/verified-followup-tests-2026-10-16.md). These new results do not reconstruct the original nine test cases, and their new screenshots are pending upload to the repository. I distinguish Jira audit execution from observed business-rule outcomes.
 
 ## Evidence and limitations
 
