@@ -4,7 +4,7 @@ I designed, configured and validated an **implemented Jira Cloud dashboard** for
 
 ## Scope and management purpose
 
-I designed the final employer-facing dashboard around **three core governance gates**: Concept Design Review — Gate 1 (IIR-33) (Gate 1 — Concept Design Review), Prototype Validation Review — Gate 2 (IIR-35) (Gate 2 — Prototype Validation Review) and Concept Acceptance Review — Gate 3 (IIR-36) (Gate 3 — Concept Acceptance Review). I retained test gate (IIR-34) and test decision gate (IIR-37) as test issues in Jira but excluded them from the core management view. I preserved the broader saved filter `IIR | All Innovation Decision Gates` for test traceability.
+I designed the final employer-facing dashboard around **three core governance gates**: Concept Design Review — Gate 1 (IIR-33), Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36). I retained test gate (IIR-34) and test decision gate (IIR-37) as test issues in Jira but excluded them from the core management view. I preserved the broader saved filter `IIR | All Innovation Decision Gates` for test traceability.
 
 ## Final dashboard — six gadgets
 
@@ -63,7 +63,7 @@ I also retained `IIR | Gates Under Review` as a saved filter but removed its red
 
 1. I checked that the core-gate JQL returned Concept Design Review — Gate 1 (IIR-33), Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36) only.
 2. I compared the three-row detail gadget with the decision matrix, approval list, action queue and pie-chart totals.
-3. I tested the critical-risk filter using test issue test decision gate (IIR-37): `No Critical Risk` → `Critical Risk Identified` → `No Critical Risk`. The filter returned 0 → 1 → 0 matching issues. I subsequently confirmed that the dashboard risk gadget returned zero after refresh.
+3. I tested the critical-risk filter using the Test Decision Gate (IIR-37): `No Critical Risk` → `Critical Risk Identified` → `No Critical Risk`. The filter returned 0 → 1 → 0 matching issues. I subsequently confirmed that the dashboard risk gadget returned zero after refresh.
 4. I checked the final six-gadget layout and removed the redundant `Gates Under Review` gadget and the five-item test-inclusive table from the employer-facing dashboard.
 
 **Verification boundaries:** I did not independently test every future automation-triggered update, every permission scenario or a production organization's risk coverage. The positive risk test verified the saved filter with a test issue; the final core-only gadget correctly excluded that issue. All listed counts are from the observed Jira simulation.
