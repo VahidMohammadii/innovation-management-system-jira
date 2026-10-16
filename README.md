@@ -34,6 +34,10 @@ I designed and implemented a **simulated Stage-Gate innovation management system
 | Screenshots and audit traceability | [Evidence matrix](04-testing-validation/evidence-traceability-matrix.md) |
 | AI assistance and my validation | [AI contribution disclosure](05-ai-contribution/ai-assistance-and-human-validation.md) |
 
+## Management dashboard evidence
+
+I configured and validated a six-gadget Jira governance dashboard focused on the three core decision gates (IIR-33, IIR-35 and IIR-36), excluding test issues from management statistics. The dashboard shows gate decisions and review status, an approval matrix, an action-required queue, approved gates, recommendations and critical-risk flags. In the verified snapshot, one gate was Approved, two were Returned for Revision and no core gate matched the critical-risk filter. These are simulation snapshot counts, not enterprise KPIs. See the [implementation review](06-dashboard/dashboard-implementation-review.md), [dashboard overview](assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png) and [decision matrix detail](assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png). The [aligned conceptual blueprint](06-dashboard/conceptual-innovation-governance-dashboard.md) distinguishes these six implemented gadgets from unimplemented management views.
+
 ## Implementation and testing
 
 I implemented weighted gate scoring, decision recommendations, governance review and evidence checks, controlled stage transitions and safeguards for missing scores. I recorded nine passing integration tests on 15 October 2026, then separately retested AUTO-04 v2 on 16 October 2026. In the corrected positive-path scenario, I confirmed Stage 2 work item IIR-2 remained **In Review** after refresh. I distinguish Jira audit execution from observed business-rule outcomes.
