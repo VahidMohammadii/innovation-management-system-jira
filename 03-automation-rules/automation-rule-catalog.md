@@ -7,10 +7,10 @@ I configured and tested eight controls. This catalog describes their intended fu
 
 | Rule | Control | Observed scope |
 | --- | --- | --- |
-| AUTO-01 | Weighted Gate Score | Score calculation tested on IIR-37 |
+| AUTO-01 | Weighted Gate Score | Score calculation tested on test decision gate (IIR-37) |
 | AUTO-02 | Gate Recommendation | Go / No-Go / Revise candidate logic; I corrected a stale recommendation using an unconditional ELSE fallback |
 | AUTO-03 | Governance Review Control | Governance scenarios exercised; current precise conditions require reinspection |
-| AUTO-04 v2 | Stage 2 progression | Uses Stage 2 IIR-2 and Gate 1 IIR-33; older version disabled in observed setup |
+| AUTO-04 v2 | Stage 2 progression | Uses Stage 2 Prototype & Test (IIR-2) and Gate 1 Concept Design Review — Gate 1 (IIR-33); older version disabled in observed setup |
 | AUTO-05 | Stage 3 progression | Checks Gate 2 decision and governance approval |
 | AUTO-06 | Stage 4 progression | Checks Gate 3 decision and governance approval |
 | AUTO-07 | Evidence Completeness | Returns incomplete approvals to Returned for Revision; duplicate-comment prevention tested |
@@ -18,7 +18,7 @@ I configured and tested eight controls. This catalog describes their intended fu
 
 ## AUTO-04 v2 follow-up
 
-I tested blocked scenarios A/B and a permitted scenario C. The positive test initially failed when AUTO-07 reset IIR-33's governance approval due to incomplete evidence. I completed the simulated Gate 1 evidence record, set the required fields and retested. The AUTO-04 v2 blocking condition did not match and I confirmed IIR-2 remained **In Review** after refresh, rather than asserting it was In Progress.
+I tested blocked scenarios A/B and a permitted scenario C. The positive test initially failed when AUTO-07 reset Concept Design Review — Gate 1 (IIR-33)'s governance approval due to incomplete evidence. I completed the simulated Gate 1 evidence record, set the required fields and retested. The AUTO-04 v2 blocking condition did not match and I confirmed Prototype & Test (IIR-2) remained **In Review** after refresh, rather than asserting it was In Progress.
 
 Evidence: [AUTO-04 v2 audit history](../assets/evidence/EVID-24-AUTO-04-v2-Audit-History.png), [Gate 1 configuration](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png), [Test C condition](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png).
 

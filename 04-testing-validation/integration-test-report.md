@@ -8,13 +8,13 @@
 
 ## 1. Executive summary
 
-This portfolio case study demonstrates an implementation of stage-gate innovation governance using Jira work items, custom fields, linked decision gates, automation rules, and audit trails. I completed and recorded nine passing integration tests on 15 October 2026. I subsequently retested AUTO-04 v2 after investigating its interaction with AUTO-07. I confirmed the Stage 2 issue IIR-2 remained **In Review** after refresh during the corrected positive scenario. I have not yet independently reconciled all original test cases to their individual evidence, and I do not claim production deployment.
+This portfolio case study demonstrates an implementation of stage-gate innovation governance using Jira work items, custom fields, linked decision gates, automation rules, and audit trails. I completed and recorded nine passing integration tests on 15 October 2026. I subsequently retested AUTO-04 v2 after investigating its interaction with AUTO-07. I confirmed the Stage 2 issue Prototype & Test (IIR-2) remained **In Review** after refresh during the corrected positive scenario. I have not yet independently reconciled all original test cases to their individual evidence, and I do not claim production deployment.
 
 ## 2. Scope and system components
 
 | Rule | Function | Evidence / outcome noted during implementation |
 | --- | --- | --- |
-| AUTO-01 | Calculate Weighted Innovation Gate Score | Successful calculation and audit execution demonstrated on IIR-37. |
+| AUTO-01 | Calculate Weighted Innovation Gate Score | Successful calculation and audit execution demonstrated on test decision gate (IIR-37). |
 | AUTO-02 | Innovation Gate Decision Recommendation | Go / No-Go / Revise candidate logic tested; a stale recommendation issue was identified and corrected through subsequent logic changes. |
 | AUTO-03 | Innovation Governance Review Control | Configured and exercised during governance tests; verify the exact rule details against the current Jira configuration. |
 | AUTO-04 (v2) | Stage Progression Governance Control | Revised version enabled; older AUTO-04 disabled in observed configuration. |
@@ -23,7 +23,7 @@ This portfolio case study demonstrates an implementation of stage-gate innovatio
 | AUTO-07 | Gate Evidence Completeness Control | Returns approval to 'Returned for Revision' if required evidence fields are incomplete. |
 | AUTO-08 | Missing Gate Score Control | Resets a stale recommendation to 'Pending Review' when the weighted score is missing. |
 
-**Representative Jira work items:** IIR-33 (Gate 1), IIR-2 (Stage 2), IIR-35 (Gate 2), IIR-36 (Gate 3), IIR-3 (Stage 3), IIR-4 (Stage 4), IIR-37 (test decision gate).
+**Representative Jira work items:** Concept Design Review — Gate 1 (IIR-33) (Gate 1), Prototype & Test (IIR-2) (Stage 2), Prototype Validation Review — Gate 2 (IIR-35) (Gate 2), Concept Acceptance Review — Gate 3 (IIR-36) (Gate 3), Concept Acceptance (IIR-3) (Stage 3), Market Launch (IIR-4) (Stage 4), test decision gate (IIR-37) (test decision gate).
 
 ## 3. Integration test outcome
 
@@ -43,7 +43,7 @@ For a transparent retrospective summary, see the [reconstructed integration test
 
 ### AUTO-04 v2 follow-up — 16 October 2026
 
-I separately retested blocked A/B scenarios and the permitted C scenario. An initial positive-path attempt was rolled back when AUTO-07 returned IIR-33 to Returned for Revision due to incomplete evidence. I added the simulated Gate 1 evidence record, completed required fields and restored the controlled approval. In the corrected test, the AUTO-04 v2 blocking condition did not match; IIR-2 remained **In Review** after refresh. I do not describe the observed state as In Progress.
+I separately retested blocked A/B scenarios and the permitted C scenario. An initial positive-path attempt was rolled back when AUTO-07 returned Concept Design Review — Gate 1 (IIR-33) to Returned for Revision due to incomplete evidence. I added the simulated Gate 1 evidence record, completed required fields and restored the controlled approval. In the corrected test, the AUTO-04 v2 blocking condition did not match; Prototype & Test (IIR-2) remained **In Review** after refresh. I do not describe the observed state as In Progress.
 
 ## 4. Defects found and resolutions
 

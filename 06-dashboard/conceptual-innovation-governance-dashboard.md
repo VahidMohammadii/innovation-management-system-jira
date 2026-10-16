@@ -1,118 +1,75 @@
-# Innovation Governance Dashboard — Conceptual Blueprint
+# Innovation Governance Dashboard — Conceptual Blueprint and Implementation Alignment
 
-I designed this **conceptual dashboard blueprint** to explain how a manager could monitor the simulated Innovation Implementation Roadmap (IIR) governance system through Jira. It connects the four documented stages, three decision gates, evidence requirements and eight automation controls to decision-oriented dashboard views.
+I designed this management-information blueprint for my simulated Innovation Implementation Roadmap (IIR). It explains how the implemented Jira governance dashboard relates to the broader Stage-Gate operating model. I distinguish **implemented and validated views** from **conceptual extensions**; this document is not an export of Jira configuration or evidence of enterprise deployment.
 
-**Implementation boundary:** This file is a proposed information architecture, **not a screenshot or exact export of the live dashboard**. I have also configured an [existing Jira governance dashboard](dashboard-implementation-review.md), whose observed gadgets overlap with—but do not implement every panel of—this blueprint. I intentionally show **no invented counts, percentages, KPIs or trend values**.
+## 1. Implemented and validated dashboard
 
-## 1. Proposed management dashboard layout
+On 16 October 2026, I reviewed the final six-gadget **Innovation Implementation Governance Dashboard** in Jira (`/jira/dashboards/10001`). The management scope is limited to the three core gates: Concept Design Review — Gate 1 (IIR-33), Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36). I excluded test issues test gate (IIR-34) and test decision gate (IIR-37) from the core management statistics.
 
-The diagram below is a **wireframe**, not a real Jira screen. Each box represents a proposed dashboard panel; labels are grounded in the Jira issues and governance fields documented for this portfolio.
+| Implemented gadget | Management question | Validated snapshot |
+| --- | --- | --- |
+| Core Innovation Gates — Filter Results | What is each gate's decision, approval and workflow state? | Three gates: Concept Design Review — Gate 1 (IIR-33) Done / Go / Approved; Prototype Validation Review — Gate 2 (IIR-35) In Progress / Go / Returned for Revision; Concept Acceptance Review — Gate 3 (IIR-36) To Do / Go / Returned for Revision |
+| Two Dimensional Filter Statistics | How do approval and gate decisions intersect? | Approved + Go: 1; Returned for Revision + Go: 2; total 3 |
+| Governance Action Required — Filter Results | Which gates require governance action? | Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36); total 2 |
+| Approved Innovation Gates — Filter Results | Which gates have Go and Approved together? | Concept Design Review — Gate 1 (IIR-33) only; total 1 |
+| Gate Recommendation — Pie Chart | What are the automated recommendations? | Pending Review: 2; Go Candidate: 1; total 3 |
+| Critical Innovation Risks — Filter Results | Which core gates have the critical-risk flag? | No matching core gates at the final refresh |
 
-```mermaid
-flowchart TB
-    TITLE["INNOVATION GOVERNANCE DASHBOARD<br/>Proposed management view | Portfolio simulation"]
+These are observed **snapshot values**, not continuous KPIs or production business results. A `Go` gate decision does not by itself mean governance approval. A zero critical-risk count is limited to the configured core-gate filter and refresh time.
 
-    subgraph TOP["01 — Portfolio progression"]
-      direction LR
-      S1["Stage 1<br/>Design Concept<br/>IIR-1"]
-      S2["Stage 2<br/>Prototype & Test<br/>IIR-2"]
-      S3["Stage 3<br/>Concept Acceptance<br/>IIR-3"]
-      S4["Stage 4<br/>Market Launch<br/>IIR-4"]
-      S1 --> S2 --> S3 --> S4
-    end
+The [final dashboard implementation review](dashboard-implementation-review.md) contains the exact saved JQL, validation method, limitations and screenshots:
 
-    subgraph MIDDLE["02 — Gate readiness and decision quality"]
-      direction LR
-      G1["Gate 1 · IIR-33<br/>Concept Design Review<br/>Decision / Approval / Evidence"]
-      G2["Gate 2 · IIR-35<br/>Prototype Validation Review<br/>Decision / Approval / Evidence"]
-      G3["Gate 3 · IIR-36<br/>Concept Acceptance Review<br/>Decision / Approval / Evidence"]
-    end
+- [DASH-01 — six-gadget overview](../assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png)
+- [DASH-02 — core-gate detail and decision matrix](../assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png)
 
-    subgraph BOTTOM["03 — Management action panels"]
-      direction LR
-      P1["Evaluation and recommendations<br/>Weighted Gate Score<br/>Go / No-Go / Revise candidate"]
-      P2["Exceptions requiring attention<br/>Incomplete evidence<br/>Missing score<br/>Blocked stage progression"]
-      P3["Decision accountability<br/>Decision Owner / Review Date<br/>Decision Rationale / Evidence Link<br/>Jira History / Automation Audit"]
-    end
-
-    TITLE --> TOP
-    TOP --> MIDDLE
-    MIDDLE --> BOTTOM
-
-    classDef header fill:#243B61,stroke:#243B61,color:#FFFFFF
-    classDef stage fill:#E8F0FE,stroke:#4879B7,color:#183451
-    classDef gate fill:#FFF1D6,stroke:#B88625,color:#493611
-    classDef panel fill:#E5F4EC,stroke:#39835B,color:#173D2B
-    class TITLE header
-    class S1,S2,S3,S4 stage
-    class G1,G2,G3 gate
-    class P1,P2,P3 panel
-```
-
-**How to read it:** I would use the top row to orient the viewer in the innovation roadmap, the middle row to inspect whether formal gates are ready for decision, and the bottom row to identify the next management action. The arrows express a proposed **reading hierarchy**, not Jira automation dependencies.
-
-## 2. How information would reach the dashboard
+## 2. Implemented information flow
 
 ```mermaid
 flowchart LR
-    WORK["Jira work items<br/>Stages IIR-1 to IIR-4<br/>Gates IIR-33, 35, 36"] --> FIELDS["Governance fields<br/>Score, Recommendation, Gate Decision<br/>Review Status, Evidence Status<br/>Evidence Link, Rationale"]
-    AUTO["Automation controls<br/>AUTO-01 to AUTO-08"] --> FIELDS
-    FIELDS --> FILTER["Proposed Jira filters / views<br/>Actual JQL and gadgets<br/>not yet configured or verified"]
-    FILTER --> DASH["Conceptual dashboard panels<br/>Progression / Gate readiness<br/>Exceptions / Accountability"]
-    AUDIT["Jira History and Automation Audit"] -. "Drill-down for verification" .-> DASH
-
-    classDef core fill:#E8F0FE,stroke:#4879B7,color:#183451
-    classDef proposed fill:#FFF1D6,stroke:#B88625,color:#493611
-    class WORK,FIELDS,AUTO,AUDIT core
-    class FILTER,DASH proposed
+    G["Core decision gates<br/>Concept Design Review (IIR-33)<br/>Prototype Validation Review (IIR-35)<br/>Concept Acceptance Review (IIR-36)"] --> F["Saved Jira filters<br/>Core Gates / Action Required<br/>Approved Gates / Critical Risks"]
+    A["Automation AUTO-01–AUTO-08<br/>and governance fields"] --> G
+    F --> D["Implemented six-gadget dashboard<br/>detail / decision matrix / action queue<br/>approval list / recommendations / risk list"]
+    D -. "Investigate a gate" .-> H["Jira issue details, History<br/>and Automation Audit"]
 ```
 
-This is a **proposed data flow**. I have observed connected Jira dashboard gadgets and saved-filter-based views, but I have not yet reconciled their exact JQL, field availability, sharing permissions or dashboard refresh behavior. Jira History and Automation Audit should be inspected in their appropriate Jira views rather than assumed to be natively embedded as live dashboard gadgets.
+The dashboard uses saved-filter results and field-based gadget groupings. Jira issue History and Automation Audit are separate verification sources; I do not claim that they are embedded as live audit gadgets. I validated the final core-gate counts and six-gadget layout, not every possible future automation-triggered refresh or permission scenario.
 
-## 3. Dashboard panel specification
+### Saved filter scope
 
-| Proposed panel | Management question | Source / logic in the documented system | Implementation status |
-| --- | --- | --- | --- |
-| Stage progression | Where is the innovation initiative in the roadmap? | IIR-1 through IIR-4 and their issue statuses | Conceptual view; live dashboard not verified |
-| Gate readiness | Which gate is ready for a formal decision? | IIR-33, IIR-35, IIR-36; Gate Decision, Governance Review Status and evidence fields | Conceptual view; actual filter not verified |
-| Evaluation quality | What is the weighted assessment and recommendation? | Weighted Gate Score (AUTO-01), Gate Recommendation (AUTO-02), missing-score reset (AUTO-08) | Source controls documented; visualization proposed |
-| Evidence completeness | Is the approval supported by the required evidence? | Evidence Status, Evidence Link, Decision Rationale; AUTO-07 | Gate 1 scenario documented; portfolio-wide completeness view proposed |
-| Blocked transitions | Which next-stage progression requires intervention? | AUTO-04 v2 (Stage 2), AUTO-05 (Stage 3), AUTO-06 (Stage 4) | Controls documented; aggregated dashboard view proposed |
-| Governance accountability | Who approved what, why and when? | Gate Decision, Governance Review Status, Decision Rationale, Review Date, Decision Owner (where available), Jira History | Field availability varies; no universal completed record claimed |
-| Automation exceptions | What needs technical follow-up? | Automation Audit and issue History, including mismatched conditions | Evidence available; dashboard integration not implemented |
+I used `IIR | Core Innovation Gates` for the three-gate detail table, decision matrix and recommendation pie chart. I used `IIR | Governance Action Required`, `IIR | Approved Innovation Gates` and `IIR | Critical Innovation Risks` for the respective exception and approval lists. I retained the broader `IIR | All Innovation Decision Gates` and `IIR | Gates Under Review` saved filters without displaying their redundant or test-inclusive gadgets in the final management view. See the [verified JQL definitions](dashboard-implementation-review.md#saved-jql-and-scope).
 
-Some comparable panels **do exist** in the implemented Jira dashboard; I do **not** claim every proposed panel exists or that an independently validated management KPI has been calculated. This specification is intended to make the future dashboard testable.
+## 3. Conceptual extensions — not implemented dashboard gadgets
 
-## 4. Example management reading path — documented Gate 1 scenario
+I also designed the following potential management views. They illustrate future information architecture, **not** deployed or independently validated dashboard capabilities.
 
-1. **Identify the gate:** Gate 1 is represented by IIR-33 and controls entry into Stage 2 (IIR-2).
-2. **Inspect evidence and approval:** In the simulated positive-path test I populated Evidence Status, Evidence Link and Decision Rationale, then used Go and Approved for the governance decision.
-3. **Inspect the control:** AUTO-07 had previously reset an incomplete approval. After completing the evidence, I retested AUTO-04 v2.
-4. **Check actual issue behavior:** I observed the AUTO-04 v2 blocking condition did not match and **IIR-2 remained In Review after refresh** on 16 October 2026.
-5. **Escalate or close the exception:** A dashboard could link a manager to the underlying Jira item and audit evidence, but that dashboard drill-down has **not** been implemented or tested.
-
-See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evidence.md) and [AUTO-04 v2 test evidence](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png).
-
-## 5. Practical Jira implementation roadmap (future work)
-
-| Step | Proposed action | Acceptance criterion |
+| Conceptual extension | Management question | Source or constraint |
 | --- | --- | --- |
-| 1 | Confirm the available Jira project fields, permissions and issue types | Verified field inventory and allowed viewers |
-| 2 | Define saved JQL filters for stages, gates and exceptions | Each filter returns the intended simulated issues |
-| 3 | Create a Jira dashboard and choose supported gadgets | Dashboard exists and its gadgets load without errors |
-| 4 | Configure gate-readiness and exception views | Counts and displayed fields reconcile to Jira work items |
-| 5 | Test a changed gate decision and an incomplete-evidence case | Views refresh appropriately and lead to correct issue records |
-| 6 | Capture screenshots, privacy-review them and add an evidence register | Dashboard implementation is demonstrable and auditable |
+| Stage progression overview | Where are Design Concept (IIR-1) through Market Launch (IIR-4) in the roadmap? | Stage work items and statuses; no dedicated validated stage-progression gadget |
+| Portfolio-wide evidence completeness | Which gate decisions lack supporting evidence? | Evidence Status, Evidence Link, Decision Rationale and AUTO-07; Gate 1 evidence scenario tested, not an aggregated dashboard |
+| Blocked transition monitoring | Which Stage 2/3/4 transitions require intervention? | AUTO-04 v2, AUTO-05, AUTO-06; no validated cross-stage exception gadget |
+| Decision accountability and chronology | Who approved which decision, when and why? | Jira issue History and available governance fields; no universal dashboard or complete decision-owner dataset verified |
+| Automation health and audit trends | Are governance rules failing or misfiring over time? | Jira Automation Audit; no implemented dashboard trend gadget |
+| Weighted evaluation detail | How did individual criteria contribute to a score? | AUTO-01 weighted scoring; no dedicated criteria-breakdown gadget validated |
 
-These are **remaining verification and extension steps**, not claims that the existing dashboard must be rebuilt.
+```mermaid
+flowchart TB
+    ROADMAP["Conceptual extension: stage progression<br/>Design Concept (IIR-1) → Prototype & Test (IIR-2)<br/>Concept Acceptance (IIR-3) → Market Launch (IIR-4)"]
+    GATES["Implemented: three-gate detail<br/>approval matrix and recommendation chart"]
+    ACTION["Implemented: governance action queue<br/>approved-gate list and critical-risk list"]
+    FUTURE["Conceptual extensions only:<br/>evidence completeness / blocked transitions<br/>accountability / automation trends"]
+    ROADMAP --> GATES --> ACTION --> FUTURE
+```
 
-## 6. Related documentation and accountability
+The arrows describe a suggested **management reading order**, not Jira automation execution or proof that the conceptual panels exist.
 
-- [Conceptual Stage-Gate process flow](../01-system-design/conceptual-stage-gate-flow.md)
-- [Jira implementation architecture](../02-jira-implementation/README.md)
-- [Automation rule catalog](../03-automation-rules/automation-rule-catalog.md)
-- [Governance and traceability](../03-automation-rules/governance-and-traceability.md)
-- [Evidence traceability matrix](../04-testing-validation/evidence-traceability-matrix.md)
-- [AI assistance and human validation](../05-ai-contribution/ai-assistance-and-human-validation.md)
+## 4. Example: Gate 1 and Stage 2 control
 
-I used AI to help organize the conceptual visualization and documentation. I remain responsible for the design and for distinguishing **proposed dashboard capabilities** from **Jira behavior I actually configured and verified**.
+I used Concept Design Review — Gate 1 (IIR-33) and Prototype & Test — Stage 2 (IIR-2) to examine the interaction between evidence completeness (AUTO-07) and stage progression control (AUTO-04 v2). In the 16 October follow-up, an incomplete Gate 1 approval was returned for revision. After I populated the simulated evidence prerequisites and restored Go / Approved, the AUTO-04 v2 blocking condition did not match; I confirmed **Prototype & Test (IIR-2) remained In Review after refresh**. I do not equate this with a verified transition to In Progress. See the [Gate 1 evidence record](../01-system-design/gate-1-concept-review-evidence.md) and [integration report](../04-testing-validation/integration-test-report.md).
+
+## 5. Verification boundary and ownership
+
+I checked the final dashboard's six gadgets, the three-core-gate scope and cross-gadget totals. I tested the critical-risk saved filter with a reversible flag change on test decision gate (IIR-37) and restored its original value; the final dashboard's core-gate risk list correctly showed no matching items. I have not validated multi-user permissions, every future refresh scenario or the conceptual extensions.
+
+I used AI to support information architecture, JQL troubleshooting, validation planning and documentation. I configured Jira, executed checks, reviewed the screenshots and retain responsibility for the conclusions.
+
+Related: [dashboard implementation review](dashboard-implementation-review.md) · [Stage-Gate system flow](../01-system-design/conceptual-stage-gate-flow.md) · [automation catalog](../03-automation-rules/automation-rule-catalog.md) · [evidence matrix](../04-testing-validation/evidence-traceability-matrix.md).
