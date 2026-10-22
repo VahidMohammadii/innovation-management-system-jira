@@ -5,6 +5,7 @@ I configured and validated a Jira Cloud **Innovation Implementation Governance D
 - [Implemented dashboard and validation](dashboard-implementation-review.md) — six gadgets, verified outputs, JQL scope and test boundaries.
 - [Conceptual dashboard blueprint](conceptual-innovation-governance-dashboard.md) — a broader management information architecture; not every proposed panel was implemented.
 
-I tested the critical-risk filter with a reversible change on IIR-37, then restored the original value. The final management view uses core-gate-only filters.
+I tested the critical-risk filter with a reversible change on IIR-37, then restored the original value.
+The final management view uses core-gate-only filters.
 
 **Evidence publication:** I uploaded two selected screenshots to `assets/evidence/` on `main`: the [dashboard overview](../assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png) and [decision matrix detail](../assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png). The dashboard is a portfolio simulation, not an enterprise deployment.
