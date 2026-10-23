@@ -8,7 +8,8 @@
 
 ## 1. Purpose and scope
 
-This document provides a traceable, publicly accessible simulation record for testing the Gate 1 governance decision in the Innovation Implementation Roadmap Jira portfolio project. It supports the test of the relationship between Concept Design Review — Gate 1 (IIR-33), Prototype & Test — Stage 2 (IIR-2), evidence completeness control (AUTO-07), and stage progression control (AUTO-04 v2).
+This document provides a traceable, publicly accessible simulation record for testing the Gate 1 governance decision in the Innovation Implementation Roadmap Jira portfolio project.
+It supports the test of the relationship between Concept Design Review — Gate 1 (IIR-33), Prototype & Test — Stage 2 (IIR-2), evidence completeness control (AUTO-07), and stage progression control (AUTO-04 v2).
 
 ## 2. Simulated decision context
 
