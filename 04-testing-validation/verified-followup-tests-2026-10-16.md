@@ -2,7 +2,7 @@
 
 **Scope:** New owner-executed Jira Cloud portfolio-simulation tests, distinct from the nine reported historical executions on 15 October 2026. I performed the Jira actions and reviewed the resulting issue fields, History and audit logs. AI helped interpret the observations and prepare this record; I retain responsibility for verification.
 
-**Evidence status:** Nine new screenshots covering TC-01 and TC-04 are committed under `assets/evidence/` and linked below. The screenshots and recorded audit IDs support these two observed runs only. Owner privacy review of the newly uploaded images remains pending before PR merge. The original nine historical tests are separate.
+**Evidence status:** Nine new screenshots covering TC-01 and TC-04 are committed under `assets/evidence/` and linked below. The screenshots and recorded audit IDs support these two observed runs only. I reviewed and approved the newly uploaded images for public portfolio use on 2 November 2026. The original nine historical tests are separate.
 
 ## TC-04 — AUTO-04 v2: permitted Stage 2 progression
 
