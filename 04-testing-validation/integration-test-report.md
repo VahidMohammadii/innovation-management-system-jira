@@ -47,7 +47,7 @@ I separately retested blocked A/B scenarios and the permitted C scenario. An ini
 
 ### Newly verified follow-up tests — 16 October 2026
 
-I verified **TC-04**: with Gate 1 Go/Approved, I manually transitioned IIR-2 to In Progress and confirmed AUTO-04 v2 did not roll it back (audit `24cb375d-daaa-4f0c-b5d3-2780e24dad1a`). I also verified **TC-01**: AUTO-01 calculated 3.85 from five known scoring inputs and updated IIR-37 (audit `9210e4a8-2e0f-464a-b712-16f91083b099`). The new screenshots were reviewed in the working session but are not yet stored in this repository. See [the new test register](verified-followup-tests-2026-10-16.md). These results do **not** retrospectively reconcile the original nine executions.
+I verified **TC-04**: with Gate 1 Go/Approved, I manually transitioned IIR-2 to In Progress and confirmed AUTO-04 v2 did not roll it back (audit `24cb375d-daaa-4f0c-b5d3-2780e24dad1a`). I also verified **TC-01**: AUTO-01 calculated 3.85 from five known scoring inputs and updated IIR-37 (audit `9210e4a8-2e0f-464a-b712-16f91083b099`). Nine screenshots for these two tests are now committed and linked in the follow-up register; the newly uploaded images still require separate owner privacy confirmation before PR merge. See [the new test register](verified-followup-tests-2026-10-16.md). These results do **not** retrospectively reconcile the original nine executions.
 
 ## 4. Defects found and resolutions
 
