@@ -36,18 +36,18 @@ The EVID-05 identifier appears twice in different filenames. EVID-01 and EVID-06
 
 ## Newly uploaded follow-up evidence — TC-01 and TC-04
 
-The following nine files were committed to the PR branch on 2 November 2026. Their exact paths have been checked. **Owner privacy approval is pending for these new images**; the earlier 25-image approval does not automatically cover them.
+The following nine files were committed to the PR branch on 2 November 2026. Their exact paths have been checked. **I separately approved these nine new images for public portfolio use on 2 November 2026**; this is my owner review, not an independent certification.
 
 | Test | Evidence | Purpose | Review |
 | --- | --- | --- | --- |
-| TC-01 | [TC01-01](../assets/evidence/TC01-01.PNG) | AUTO-01 configuration | Path verified; owner privacy review pending |
-| TC-01 | [TC01-02](../assets/evidence/TC01-02.PNG) | IIR-37 inputs and 3.85 score | Path verified; owner privacy review pending |
-| TC-01 | [TC01-03](../assets/evidence/TC01-03.PNG) | AUTO-01 audit | Path verified; owner privacy review pending |
-| TC-01 | [C01-04](../assets/evidence/C01-04.PNG) | IIR-37 History | Path verified; owner privacy review pending |
-| TC-04 | [TC04-01](../assets/evidence/TC04-01.PNG) | AUTO-04 v2 configuration | Path verified; owner privacy review pending |
-| TC-04 | [TC04-02](../assets/evidence/TC04-02.PNG) | Gate 1 context (not complete prerequisite proof alone) | Path verified; owner privacy review pending |
-| TC-04 | [TC04-03](../assets/evidence/TC04-03.PNG) | IIR-2 In Progress | Path verified; owner privacy review pending |
-| TC-04 | [TC04-04](../assets/evidence/TC04-04.PNG) | AUTO-04 v2 audit | Path verified; owner privacy review pending |
-| TC-04 | [TC04-05](../assets/evidence/TC04-05.PNG) | IIR-2 transition History | Path verified; owner privacy review pending |
+| TC-01 | [TC01-01](../assets/evidence/TC01-01.PNG) | AUTO-01 configuration | Path verified; owner approved 2026-11-02 |
+| TC-01 | [TC01-02](../assets/evidence/TC01-02.PNG) | IIR-37 inputs and 3.85 score | Path verified; owner approved 2026-11-02 |
+| TC-01 | [TC01-03](../assets/evidence/TC01-03.PNG) | AUTO-01 audit | Path verified; owner approved 2026-11-02 |
+| TC-01 | [C01-04](../assets/evidence/C01-04.PNG) | IIR-37 History | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-01](../assets/evidence/TC04-01.PNG) | AUTO-04 v2 configuration | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-02](../assets/evidence/TC04-02.PNG) | Gate 1 context (not complete prerequisite proof alone) | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-03](../assets/evidence/TC04-03.PNG) | IIR-2 In Progress | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-04](../assets/evidence/TC04-04.PNG) | AUTO-04 v2 audit | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-05](../assets/evidence/TC04-05.PNG) | IIR-2 transition History | Path verified; owner approved 2026-11-02 |
 
 See the [verified test register](verified-followup-tests-2026-10-16.md) for audit IDs, expected/actual results and scope boundaries.
