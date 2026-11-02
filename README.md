@@ -44,7 +44,7 @@ I implemented weighted gate scoring, decision recommendations, governance review
 
 ## Evidence and limitations
 
-I maintain screenshots in [assets/evidence](assets/evidence/) and have checked their content. I reviewed the earlier 25 published automation/audit screenshots for privacy and confidentiality concerns and approved them for publication. The nine newly uploaded TC-01/TC-04 images require a separate owner privacy confirmation before merging this PR. Detailed case-level reconciliation remains outstanding. The nine original tests still require complete case-by-case reconciliation with timestamps, inputs and expected/actual outcomes. This repository is a transparent professional portfolio simulation, not a production certification.
+I maintain screenshots in [assets/evidence](assets/evidence/) and have checked their content. I reviewed the earlier 25 published automation/audit screenshots for privacy and confidentiality concerns and approved them for publication. I reviewed and approved the nine newly uploaded TC-01/TC-04 images for public portfolio use on 2 November 2026. Detailed case-level reconciliation remains outstanding. The nine original tests still require complete case-by-case reconciliation with timestamps, inputs and expected/actual outcomes. This repository is a transparent professional portfolio simulation, not a production certification.
 
 ## AI disclosure
 
