@@ -10,7 +10,7 @@ I reconstructed known test coverage transparently in the [retrospective integrat
 
 ## Verified new follow-up tests (16 October 2026)
 
-I separately verified [TC-04 (AUTO-04 v2 permitted progression) and TC-01 (AUTO-01 weighted scoring)](verified-followup-tests-2026-10-16.md) against new Jira audit logs, work-item fields and History. These are **two new tests**, not a reconstruction of the original nine. Nine screenshots are now uploaded and linked in the follow-up register. Owner privacy approval of these new screenshots remains required before merging. TC-02 and the remaining new cases are pending.
+I separately verified [TC-04 (AUTO-04 v2 permitted progression) and TC-01 (AUTO-01 weighted scoring)](verified-followup-tests-2026-10-16.md) against new Jira audit logs, work-item fields and History. These are **two new tests**, not a reconstruction of the original nine. Nine screenshots are now uploaded and linked in the follow-up register. I reviewed and approved these nine screenshots for public portfolio use on 2 November 2026. TC-02 and the remaining new cases are pending.
 
 ## Screenshot publication intake — 2 November 2026
 
