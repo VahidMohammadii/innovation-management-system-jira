@@ -1,6 +1,6 @@
 # TC-01 and TC-04 screenshot intake — 2 November 2026
 
-**Status:** All nine screenshot files are committed to the evidence PR branch and exact paths verified. Owner privacy/confidentiality approval remains pending before merge.
+**Status:** All nine screenshot files are committed to the evidence PR branch and exact paths verified. I approved the nine images for public portfolio use on 2 November 2026.
 
 I supplied a RAR archive containing nine PNG screenshots for two previously verified tests, TC-01 and TC-04. AI assisted with file inspection and documentation; I remain responsible for the final evidence selection and privacy review. I uploaded the nine source images to the PR branch; AI assisted with file and link checks.
 
@@ -30,10 +30,10 @@ All paths below are committed files in this PR branch. Retain the original filen
 
 - [x] Upload the nine PNG files to their exact paths on this PR branch.
 - [x] Verify each file exists at its exact GitHub path (visual legibility still requires final owner review).
-- [ ] Recheck each screenshot for personal data, account identifiers, internal URLs and confidential content before public release; redact if needed and record that change.
-- [ ] Confirm audit IDs, execution timestamps, issue History and outcomes against the test register; avoid relying on an audit Success badge alone.
+- [x] Owner confirmed review and public-publication approval for the nine new screenshots on 2 November 2026. This is an owner review, not an independent privacy certification.
+- [x] Cross-referenced screenshot roles with the documented audit IDs, issue History and observed outcomes; a Jira Success status alone is not treated as proof of the business outcome.
 - [x] Add relative image links to the verified follow-up register and the evidence traceability matrix after upload.
 - [x] Update the README's screenshot-pending statement after verifying the nine paths.
-- [ ] Obtain owner approval before merging.
+- [ ] Owner to review the completed PR diff and explicitly approve merge; publication approval of screenshots is not merge authorization.
 
 **Limitations:** The nine files document two test cases, not nine distinct cases. The historical nine tests remain unreconciled. No previously published screenshot binary was changed; this PR adds nine new screenshot binaries.
