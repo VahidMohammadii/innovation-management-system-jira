@@ -2,7 +2,7 @@
 
 **Status:** Screenshot content and publication privacy reviewed by me; detailed case-level reconciliation pending.
 
-I use this register to distinguish a screenshot filename from independently verified proof of a specific outcome. The GitHub directory listing contains the following 25 images. I also reviewed all 25 images for privacy and confidentiality concerns and approved them for public portfolio use. This is my publication review, not an independent security certification.
+I use this register to distinguish a screenshot filename from independently verified proof of a specific outcome. The following table records the earlier 25 automation/audit images. I also reviewed all 25 images for privacy and confidentiality concerns and approved them for public portfolio use. This is my publication review, not an independent security certification.
 
 | Evidence | Rule / subject | Review |
 | --- | --- | --- |
@@ -33,3 +33,21 @@ I use this register to distinguish a screenshot filename from independently veri
 | [EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png](../assets/evidence/EVID-26-AUTO-04-Test-C-Condition-Not-Matched.png.png) | AUTO-04 v2 test C | Confirmed |
 
 The EVID-05 identifier appears twice in different filenames. EVID-01 and EVID-06 through EVID-09 do not appear in the current directory inventory. I have not renamed or deleted any evidence. I still need to map all nine original tests to case IDs, inputs, expected/actual results, Jira issue IDs, timestamps and screenshot evidence.
+
+## Newly uploaded follow-up evidence — TC-01 and TC-04
+
+The following nine files were committed to the PR branch on 2 November 2026. Their exact paths have been checked. **I separately approved these nine new images for public portfolio use on 2 November 2026**; this is my owner review, not an independent certification.
+
+| Test | Evidence | Purpose | Review |
+| --- | --- | --- | --- |
+| TC-01 | [TC01-01](../assets/evidence/TC01-01.PNG) | AUTO-01 configuration | Path verified; owner approved 2026-11-02 |
+| TC-01 | [TC01-02](../assets/evidence/TC01-02.PNG) | IIR-37 inputs and 3.85 score | Path verified; owner approved 2026-11-02 |
+| TC-01 | [TC01-03](../assets/evidence/TC01-03.PNG) | AUTO-01 audit | Path verified; owner approved 2026-11-02 |
+| TC-01 | [C01-04](../assets/evidence/C01-04.PNG) | IIR-37 History | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-01](../assets/evidence/TC04-01.PNG) | AUTO-04 v2 configuration | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-02](../assets/evidence/TC04-02.PNG) | Gate 1 context (not complete prerequisite proof alone) | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-03](../assets/evidence/TC04-03.PNG) | IIR-2 In Progress | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-04](../assets/evidence/TC04-04.PNG) | AUTO-04 v2 audit | Path verified; owner approved 2026-11-02 |
+| TC-04 | [TC04-05](../assets/evidence/TC04-05.PNG) | IIR-2 transition History | Path verified; owner approved 2026-11-02 |
+
+See the [verified test register](verified-followup-tests-2026-10-16.md) for audit IDs, expected/actual results and scope boundaries.
