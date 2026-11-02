@@ -1,14 +1,14 @@
 # TC-01 and TC-04 screenshot intake — 2 November 2026
 
-**Status:** Source archive inspected; screenshot files **not yet uploaded to GitHub**. This is an intake manifest and publication checklist, not a claim that the evidence package is complete.
+**Status:** All nine screenshot files are committed to the evidence PR branch and exact paths verified. Owner privacy/confidentiality approval remains pending before merge.
 
-I supplied a RAR archive containing nine PNG screenshots for two previously verified tests, TC-01 and TC-04. AI assisted with file inspection and documentation; I remain responsible for the final evidence selection and privacy review. The original images remain outside this repository until I explicitly upload them.
+I supplied a RAR archive containing nine PNG screenshots for two previously verified tests, TC-01 and TC-04. AI assisted with file inspection and documentation; I remain responsible for the final evidence selection and privacy review. I uploaded the nine source images to the PR branch; AI assisted with file and link checks.
 
-## Screenshot inventory and proposed repository paths
+## Screenshot inventory and committed repository paths
 
-All destinations below are **proposed future paths**, not active links. Retain the original filenames during upload to avoid introducing ambiguity. The first file is named `C01-04.PNG` in the supplied archive (without the initial `T`).
+All paths below are committed files in this PR branch. Retain the original filenames during upload to avoid introducing ambiguity. The first file is named `C01-04.PNG` in the supplied archive (without the initial `T`).
 
-| Case | Source filename | Proposed path under `assets/evidence/` | Visible content | Review note |
+| Case | Source filename | Committed path under `assets/evidence/` | Visible content | Review note |
 | --- | --- | --- | --- | --- |
 | TC-01 | `TC01-01.PNG` | `assets/evidence/TC01-01.PNG` | AUTO-01 field-change trigger, Decision Gate condition, nonempty-score JQL and score-edit action | Configuration overview; formula details may require an additional close-up |
 | TC-01 | `TC01-02.PNG` | `assets/evidence/TC01-02.PNG` | IIR-37 five scoring inputs and Weighted Gate Score 3.85 | Outcome screenshot |
@@ -28,12 +28,12 @@ All destinations below are **proposed future paths**, not active links. Retain t
 
 ## Publication acceptance checklist
 
-- [ ] Upload the nine PNG files to their exact proposed paths on this PR branch.
-- [ ] Verify each image opens and is readable on GitHub.
+- [x] Upload the nine PNG files to their exact paths on this PR branch.
+- [x] Verify each file exists at its exact GitHub path (visual legibility still requires final owner review).
 - [ ] Recheck each screenshot for personal data, account identifiers, internal URLs and confidential content before public release; redact if needed and record that change.
 - [ ] Confirm audit IDs, execution timestamps, issue History and outcomes against the test register; avoid relying on an audit Success badge alone.
-- [ ] Add **working relative links** to the verified follow-up register and the evidence traceability matrix **after** the image files exist.
-- [ ] Update the README's screenshot-pending statement only after the image files and links are verified.
+- [x] Add relative image links to the verified follow-up register and the evidence traceability matrix after upload.
+- [x] Update the README's screenshot-pending statement after verifying the nine paths.
 - [ ] Obtain owner approval before merging.
 
-**Limitations:** The nine files document two test cases, not nine distinct cases. The historical nine tests remain unreconciled. No existing screenshot binary was changed by this documentation-only PR.
+**Limitations:** The nine files document two test cases, not nine distinct cases. The historical nine tests remain unreconciled. No previously published screenshot binary was changed; this PR adds nine new screenshot binaries.
