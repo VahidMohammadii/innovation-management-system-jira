@@ -2,7 +2,7 @@
 
 **Scope:** New owner-executed Jira Cloud portfolio-simulation tests, distinct from the nine reported historical executions on 15 October 2026. I performed the Jira actions and reviewed the resulting issue fields, History and audit logs. AI helped interpret the observations and prepare this record; I retain responsibility for verification.
 
-**Evidence status:** I shared screenshots of the runs for review in the project working session. Those **new screenshots have not yet been uploaded to this repository**, so this register provides exact audit IDs and observed values but does not represent a fully self-contained GitHub evidence package. Do not substitute earlier EVID files as proof of these new runs.
+**Evidence status:** Nine new screenshots covering TC-01 and TC-04 are committed under `assets/evidence/` and linked below. The screenshots and recorded audit IDs support these two observed runs only. Owner privacy review of the newly uploaded images remains pending before PR merge. The original nine historical tests are separate.
 
 ## TC-04 — AUTO-04 v2: permitted Stage 2 progression
 
@@ -35,9 +35,25 @@
 - **Audit ID:** `9210e4a8-2e0f-464a-b712-16f91083b099`.
 - **Interpretation:** The arithmetic and persisted field result agree for this specific test input. Gate Recommendation remained `Pending Review` in the supplied screenshot; AUTO-02 behavior was **not** tested here.
 
+## Linked screenshot evidence
+
+| Case | Evidence | Repository image |
+| --- | --- | --- |
+| TC-01 | AUTO-01 rule configuration | [TC01-01](../assets/evidence/TC01-01.PNG) |
+| TC-01 | IIR-37 score inputs and result 3.85 | [TC01-02](../assets/evidence/TC01-02.PNG) |
+| TC-01 | Successful AUTO-01 audit | [TC01-03](../assets/evidence/TC01-03.PNG) |
+| TC-01 | IIR-37 History showing 4→3 input and None→3.85 score | [C01-04](../assets/evidence/C01-04.PNG) |
+| TC-04 | AUTO-04 v2 rule configuration | [TC04-01](../assets/evidence/TC04-01.PNG) |
+| TC-04 | IIR-33 gate context; not sufficient alone to establish all prerequisites | [TC04-02](../assets/evidence/TC04-02.PNG) |
+| TC-04 | IIR-2 In Progress result | [TC04-03](../assets/evidence/TC04-03.PNG) |
+| TC-04 | AUTO-04 v2 audit with rollback IF not matched | [TC04-04](../assets/evidence/TC04-04.PNG) |
+| TC-04 | IIR-2 manual transition History | [TC04-05](../assets/evidence/TC04-05.PNG) |
+
+For earlier Gate 1 prerequisite evidence, see [EVID-25](../assets/evidence/EVID-25-AUTO-04-Gate1-Approved-Configuration.png.png). The screenshots are snapshots, not proof of every possible rule branch. The supplied archive named the fourth TC-01 image `C01-04.PNG`; that exact filename is preserved.
+
 ## Verification boundaries and next actions
 
 1. The original nine reported tests from 15 October remain **historical, unreconciled claims**; COV-01–COV-09 in the [retrospective register](reconstructed-integration-test-register.md) are not original test IDs.
 2. This new series has **two verified cases** (TC-01 and TC-04). TC-02, TC-03 and TC-05–TC-09 have not been executed and verified as part of this series.
-3. To make the new cases independently reviewable in GitHub, I must select and privacy-review the new screenshots, upload them under `assets/evidence/`, and add exact links for rule configuration, before/after issue fields, History and audit logs. Until then, the working-session screenshots are the evidence source, not repository assets.
+3. The nine new screenshots are now linked in GitHub. Before merging the evidence PR, I must perform a separate privacy and confidentiality review of these new images and confirm the screenshots' legibility and audit details.
 4. Preserve the simulated organizational context; neither test demonstrates production deployment or a multi-user approval process.
