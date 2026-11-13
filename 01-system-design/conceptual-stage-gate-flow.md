@@ -6,27 +6,27 @@ I designed this **conceptual process map** to show how the simulated innovation 
 
 ```mermaid
 flowchart TD
-    S1["Stage 1: Design Concept (IIR-1)"] --> G1["Gate 1: Concept Design Review (IIR-3)3"]
-    G1 --> D1{"Go + Approved<br/>and required evidence complete?"}
-    D1 -- Yes --> C2["AUTO-04 v2: Stage 2 progression control"]
-    C2 --> S2["Stage 2: Prototype & Test (IIR-2)"]
-    D1 -- "No: revise / missing approval" --> R1["Hold or return for revision<br/>Complete evidence and repeat review"]
+    S1["Stage 1<br/>Design Concept<br/>IIR-1"] --> G1["Gate 1<br/>Concept Design Review<br/>IIR-33"]
+    G1 --> D1{"Go decision?<br/>Governance approved?<br/>Evidence complete?"}
+    D1 -- Yes --> C2["AUTO-04 v2<br/>Stage 2 progression guard"]
+    C2 --> S2["Stage 2<br/>Prototype & Test<br/>IIR-2"]
+    D1 -- "Revise / pending" --> R1["Hold progression<br/>Complete evidence<br/>and reassess"]
     R1 -. Reassess .-> G1
-    D1 -- "No-Go" --> N1["Do not progress<br/>Record decision and rationale"]
+    D1 -- No-Go --> N1["Do not progress<br/>Record decision<br/>and rationale"]
 
-    S2 --> G2["Gate 2: Prototype Validation Review (IIR-3)5"]
-    G2 --> D2{"Go + Approved?"}
-    D2 -- Yes --> C3["AUTO-05: Stage 3 progression control"]
-    C3 --> S3["Stage 3: Concept Acceptance (IIR-3)"]
-    D2 -- "Revise / approval missing" --> R2["Hold Stage 3 progression<br/>Revise and reassess"]
+    S2 --> G2["Gate 2<br/>Prototype Validation Review<br/>IIR-35"]
+    G2 --> D2{"Go decision?<br/>Governance approved?"}
+    D2 -- Yes --> C3["AUTO-05<br/>Stage 3 progression guard"]
+    C3 --> S3["Stage 3<br/>Concept Acceptance<br/>IIR-3"]
+    D2 -- "Revise / pending" --> R2["Hold Stage 3<br/>Revise and reassess"]
     R2 -. Reassess .-> G2
     D2 -- No-Go --> N2["Do not progress<br/>Record gate decision"]
 
-    S3 --> G3["Gate 3: Concept Acceptance Review (IIR-3)6"]
-    G3 --> D3{"Go + Approved?"}
-    D3 -- Yes --> C4["AUTO-06: Stage 4 progression control"]
-    C4 --> S4["Stage 4: Market Launch (IIR-4)"]
-    D3 -- "Revise / approval missing" --> R3["Hold Stage 4 progression<br/>Revise and reassess"]
+    S3 --> G3["Gate 3<br/>Concept Acceptance Review<br/>IIR-36"]
+    G3 --> D3{"Go decision?<br/>Governance approved?"}
+    D3 -- Yes --> C4["AUTO-06<br/>Stage 4 progression guard"]
+    C4 --> S4["Stage 4<br/>Market Launch<br/>IIR-4"]
+    D3 -- "Revise / pending" --> R3["Hold Stage 4<br/>Revise and reassess"]
     R3 -. Reassess .-> G3
     D3 -- No-Go --> N3["Do not progress<br/>Record gate decision"]
 
@@ -40,23 +40,25 @@ flowchart TD
     class R1,R2,R3,N1,N2,N3 hold
 ```
 
+**Readability:** I keep diagram-node labels short and place full stage/gate names and Jira identifiers in the traceability table below. The word *guard* means that AUTO-04 v2, AUTO-05 and AUTO-06 check or block transitions; it does not mean that those rules automatically move a stage forward.
+
 **Interpretation:** I use the decision diamonds to summarize governance prerequisites, **not** to claim that each Jira rule has one identical condition expression. In particular, the Gate 1 evidence requirement is documented explicitly; I have not independently re-exported and reconciled the precise enabled condition sets for all other gates. “No-Go” and “Revise” are conceptual decision outcomes, not claims of independently tested Jira transitions for each branch.
 
 ## 2. Cross-cutting gate decision and evidence logic
 
 ```mermaid
 flowchart TD
-    INPUT["Evaluation inputs<br/>Customer Insight, Value Proposition,<br/>Product Journey, Concept Readiness,<br/>Risk & Assumptions"] --> SCORE["AUTO-01<br/>Calculate Weighted Gate Score"]
-    SCORE --> MISSING{"Score populated?"}
-    MISSING -- No --> RESET["AUTO-08<br/>Gate Recommendation: Pending Review"]
-    MISSING -- Yes --> RECOMMEND["AUTO-02<br/>Recommend Go / No-Go / Revise candidate"]
-    RECOMMEND --> HUMAN["Human governance review<br/>Gate Decision and Governance Review Status"]
-    HUMAN --> EVIDENCE{"Evidence Status, Evidence Link<br/>and Decision Rationale complete?"}
-    EVIDENCE -- No --> RETURN["AUTO-07<br/>Return incomplete approval for revision"]
-    RETURN -. Complete evidence .-> HUMAN
-    EVIDENCE -- Yes --> GATE["Approved gate decision<br/>eligible for stage progression check"]
-    GATE --> CONTROL["AUTO-04 v2 / AUTO-05 / AUTO-06<br/>Evaluate corresponding stage progression"]
-    HUMAN -. "AUTO-03: governance review control" .-> GATE
+    INPUT["Evaluation inputs<br/>Customer Insight / Value Proposition<br/>Product Journey / Concept Readiness<br/>Risk & Assumptions"] --> SCORE["AUTO-01<br/>Calculate weighted score"]
+    SCORE --> MISSING{"Score<br/>populated?"}
+    MISSING -- No --> RESET["AUTO-08<br/>Recommendation:<br/>Pending Review"]
+    MISSING -- Yes --> RECOMMEND["AUTO-02<br/>Recommend candidate:<br/>Go / No-Go / Revise"]
+    RECOMMEND --> HUMAN["Human governance review<br/>Gate Decision<br/>Review Status"]
+    HUMAN --> EVIDENCE{"Evidence Status, Link<br/>and Decision Rationale<br/>complete?"}
+    EVIDENCE -- No --> RETURN["AUTO-07<br/>Return incomplete<br/>approval for revision"]
+    RETURN -. "Complete evidence" .-> HUMAN
+    EVIDENCE -- Yes --> GATE["Approved gate<br/>Eligible for stage<br/>progression check"]
+    GATE --> CONTROL["AUTO-04 v2 / AUTO-05 / AUTO-06<br/>Check stage progression"]
+    HUMAN -. "AUTO-03: review control" .-> GATE
 
     classDef input fill:#E8F0FE,stroke:#3B6EA8,color:#182D49
     classDef action fill:#E5F4EC,stroke:#39835B,color:#173D2B
@@ -86,7 +88,7 @@ I treat the second diagram as a **logical overview**, not a universal execution 
 
 ## 4. Verification boundary and observed example
 
-In the **16 October 2026 AUTO-04 v2 follow-up**, I populated the Gate 1 evidence prerequisites on Concept Design Review — Gate 1 (IIR-33), set the simulated decision to **Go** and governance status to **Approved**, and retested the Stage 2 control. I observed that AUTO-04 v2's blocking condition did not match and that **Prototype & Test (IIR-2) remained In Review after refresh**. I do not describe that observed status as In Progress, nor equate an automation audit “Success” with verified end-to-end business progression.
+In an **earlier 16 October 2026 AUTO-04 v2 permitted-condition check**, Gate 1 (IIR-33) had the required simulated evidence, a **Go** decision and **Approved** governance status. AUTO-04 v2's blocking condition did not match, but Prototype & Test (IIR-2) remained **In Review** after refresh. In a **subsequent, separately audited test (TC-04)**, I manually moved IIR-2 through **To Do → In Progress** and confirmed that the guard did not roll back the permitted transition. This demonstrates a permitted manual transition, **not** automatic progression or full production governance validation. See the [verified follow-up test record](../04-testing-validation/verified-followup-tests-2026-10-16.md).
 
 - [Gate 1 concept-review evidence](gate-1-concept-review-evidence.md)
 - [Automation rule catalog](../03-automation-rules/automation-rule-catalog.md)
