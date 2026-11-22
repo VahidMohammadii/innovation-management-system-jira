@@ -1,51 +1,51 @@
 # Innovation Management System — Jira Portfolio Case Study
 
-I designed, configured, tested and documented a **simulated organizational innovation management system** in Jira Cloud. This portfolio case study demonstrates innovation governance, Jira project management, and responsible AI-assisted workflows. It is **not** a live enterprise deployment or proof of measured business impact.
+**Problem:** Innovation ideas can stall when evaluation criteria, evidence and decision ownership are unclear.  
+**Solution:** I built a simulated Stage-Gate governance workflow in Jira with weighted scoring, review controls, automation and management reporting.  
+**Result:** An implemented eight-control Jira portfolio model, a six-gadget governance dashboard and traceable examples of tested rule behavior—not a claim of production business impact.
 
-## Project overview
+![Innovation Governance Dashboard — six-gadget overview](assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png)
 
-I designed and implemented a **simulated Stage-Gate innovation management system** in Jira Cloud to show how organizations can structure innovation evaluation, governance approvals, evidence requirements and progression between development stages.
+*My Jira governance dashboard: three core decision gates, approval status, action queue, recommendations and risk indicators.*
 
-**The challenge:** Innovation initiatives need transparent evaluation criteria, clear decision ownership and auditable controls before moving to the next stage.
+[Deutsche Zusammenfassung](README.de.md) · [System flowchart](01-system-design/conceptual-stage-gate-flow.md) · [Evidence](04-testing-validation/evidence-traceability-matrix.md)
 
-**My solution:** I translated these governance requirements into Jira work items, weighted gate scoring, decision recommendations, evidence-completeness checks and eight automation controls (AUTO-01–AUTO-08). I documented integration tests and corrective troubleshooting with repository evidence.
+## What I built
 
-### Key competencies demonstrated
+I wanted to show how an innovation management concept becomes an operational process rather than remaining a slide deck. In this independent **portfolio simulation**, I designed four development stages and three decision gates, configured Jira work items and automation rules, and built a dashboard that makes governance decisions visible.
 
-| Competency | What I implemented or documented |
+| Capability | My implementation | Inspect it |
+| --- | --- | --- |
+| Innovation governance | Stage-Gate model, decision criteria, evidence requirements and human approvals | [Process map](01-system-design/conceptual-stage-gate-flow.md) · [Governance design](03-automation-rules/governance-and-traceability.md) |
+| Jira implementation | Eight automation controls (AUTO-01–AUTO-08), including weighted scoring and stage-transition guards | [Rule catalog](03-automation-rules/automation-rule-catalog.md) · [Configuration availability](config/README.md) |
+| Management reporting | Six-gadget dashboard scoped to Gate 1, Gate 2 and Gate 3 | [Dashboard review](06-dashboard/dashboard-implementation-review.md) · [Decision matrix image](assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png) |
+| Testing and evidence | Observed scoring result **3.85** (TC-01) and a permitted manual Stage 2 transition (TC-04), with audit and History screenshots | [Verified cases](04-testing-validation/verified-followup-tests-2026-10-16.md) · [Evidence matrix](04-testing-validation/evidence-traceability-matrix.md) |
+| Responsible AI use | AI supported design, troubleshooting and documentation; I performed Jira configuration, tests and final review | [AI contribution](05-ai-contribution/ai-assistance-and-human-validation.md) |
+
+In the dashboard snapshot, **one core gate was Approved and two were Returned for Revision**. These are observed simulation states, not enterprise performance metrics.
+
+## How the system works
+
+I evaluate innovation concepts using five weighted criteria. Automation can calculate a score and propose a recommendation, but the **Gate Decision and governance approval remain human responsibilities**. Evidence checks can return an incomplete review for revision, while stage controls can block or roll back transitions that do not meet the gate conditions. The [conceptual process map](01-system-design/conceptual-stage-gate-flow.md) distinguishes this operating model from the exact live Jira rule expressions.
+
+## Glossary
+
+| Term | Meaning |
 | --- | --- |
-| **Innovation management** | Stage-Gate architecture, evaluation criteria, governance reviews and decision traceability |
-| **Jira workflow and project management** | Eight automation controls, stage progression safeguards, audit and issue History analysis |
-| **Practical AI-assisted problem solving** | AI-supported rule design, debugging, test planning and documentation, with my direct configuration and validation |
+| **IIR** | Innovation Implementation Roadmap; prefix of the simulated Jira project issues (e.g., IIR-33). |
+| **AUTO-01–08** | Identifiers I use for the eight documented Jira automation controls. |
+| **Gate 1 / 2 / 3** | Concept Design Review (IIR-33), Prototype Validation Review (IIR-35), and Concept Acceptance Review (IIR-36). |
+| **TC** | Test Case; e.g., TC-01 tests weighted scoring and TC-04 tests the permitted Stage 2 guard path. |
+| **RACI** | Responsible, Accountable, Consulted and Informed; a suggested responsibility model for real adoption. |
 
-**Project type:** Independently developed portfolio simulation. I do not claim a production deployment, measured business impact or complete independent audit of the nine historical test executions.
+## Transferability to real organizations
 
-## Explore my work
+I designed the workflow as a reusable governance pattern. A **German municipality (Kommune)** could use decision gates to review digital-service initiatives against citizen value, feasibility, data protection and budget requirements. A **Mittelstand company** could apply the same structure to product concepts, prototypes and market-launch decisions. Neither use case is presented as an actual deployment. I describe practical stakeholders, a proposed RACI and adoption risks in [Transferability to municipalities and SMEs](07-transferability/real-world-adoption.md).
 
-| Area | Documentation |
-| --- | --- |
-| Conceptual Stage-Gate process map | [System flowchart](01-system-design/conceptual-stage-gate-flow.md) |
-| Implemented Innovation Governance Dashboard | [Observed dashboard and validation status](06-dashboard/dashboard-implementation-review.md) | 
-| Conceptual Innovation Governance Dashboard | [Dashboard blueprint](06-dashboard/conceptual-innovation-governance-dashboard.md) | 
-| Simulated Gate 1 design and evidence | [Gate 1 concept review](01-system-design/gate-1-concept-review-evidence.md) |
-| Automation rules AUTO-01–AUTO-08 | [Rule catalog](03-automation-rules/automation-rule-catalog.md) |
-| Stage-gate governance | [Governance and traceability](03-automation-rules/governance-and-traceability.md) |
-| Integration testing | [Integration test report](04-testing-validation/integration-test-report.md) and [retrospective coverage register](04-testing-validation/reconstructed-integration-test-register.md) |
-| Screenshots and audit traceability | [Evidence matrix](04-testing-validation/evidence-traceability-matrix.md) |
-| AI assistance and my validation | [AI contribution disclosure](05-ai-contribution/ai-assistance-and-human-validation.md) |
+## Current status and next steps
 
-## Management dashboard evidence
+The Jira model, dashboard, automation catalog and selected test evidence are available in this repository. I am continuing to update the broader integration-test evidence and will upload the remaining case-level records as part of the next project iteration. I will also add source configuration exports after retrieving and reviewing them from Jira.
 
-I configured and validated a six-gadget Jira governance dashboard focused on the three core decision gates: Concept Design Review — Gate 1 (IIR-33), Prototype Validation Review — Gate 2 (IIR-35) and Concept Acceptance Review — Gate 3 (IIR-36), excluding test issues from management statistics. The dashboard shows gate decisions and review status, an approval matrix, an action-required queue, approved gates, recommendations and critical-risk flags. In the verified snapshot, one gate was Approved, two were Returned for Revision and no core gate matched the critical-risk filter. These are simulation snapshot counts, not enterprise KPIs. See the [implementation review](06-dashboard/dashboard-implementation-review.md), [dashboard overview](assets/evidence/DASH-01-Innovation-Governance-Dashboard-Overview.png) and [decision matrix detail](assets/evidence/DASH-02-Core-Gates-and-Decision-Matrix.png). The [aligned conceptual blueprint](06-dashboard/conceptual-innovation-governance-dashboard.md) distinguishes these six implemented gadgets from unimplemented management views.
+For the publication boundary and next steps, see [Scope & Limitations](SCOPE-AND-LIMITATIONS.md) and [Roadmap](ROADMAP.md). For a concise history of portfolio improvements, see [Changelog](CHANGELOG.md).
 
-## Implementation and testing
-
-I implemented weighted gate scoring, decision recommendations, governance review and evidence checks, controlled stage transitions and safeguards for missing scores. I recorded nine passing integration tests on 15 October 2026, then separately retested AUTO-04 v2 on 16 October 2026. An earlier permitted-condition check left Prototype & Test (IIR-2) **In Review**; a later controlled manual transition verified that AUTO-04 v2 allowed the work item to remain **In Progress**. I also verified an AUTO-01 weighted score of **3.85** against its configured formula and Jira History. See [the new verified follow-up register](04-testing-validation/verified-followup-tests-2026-10-16.md). These new results do not reconstruct the original nine test cases, and the nine supporting screenshots for these two new cases are now linked in the [verified follow-up register](04-testing-validation/verified-followup-tests-2026-10-16.md). I distinguish Jira audit execution from observed business-rule outcomes.
-
-## Evidence and limitations
-
-I maintain screenshots in [assets/evidence](assets/evidence/) and have checked their content. I reviewed the earlier 25 published automation/audit screenshots for privacy and confidentiality concerns and approved them for publication. I reviewed and approved the nine newly uploaded TC-01/TC-04 images for public portfolio use on 2 November 2026. Detailed case-level reconciliation remains outstanding. The nine original tests still require complete case-by-case reconciliation with timestamps, inputs and expected/actual outcomes. This repository is a transparent professional portfolio simulation, not a production certification.
-
-## AI disclosure
-
-I used AI to support governance design, rule troubleshooting, test planning and documentation. I configured Jira, executed the tests, inspected the audit and issue histories and retained final responsibility for conclusions.
+**Project ownership:** I designed and executed this independent simulation. AI assisted with planning, troubleshooting and writing; the Jira actions, evidence review and final conclusions are mine.

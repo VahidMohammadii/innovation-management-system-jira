@@ -55,5 +55,5 @@ For earlier Gate 1 prerequisite evidence, see [EVID-25](../assets/evidence/EVID-
 
 1. The original nine reported tests from 15 October remain **historical, unreconciled claims**; COV-01–COV-09 in the [retrospective register](reconstructed-integration-test-register.md) are not original test IDs.
 2. This new series has **two verified cases** (TC-01 and TC-04). TC-02, TC-03 and TC-05–TC-09 have not been executed and verified as part of this series.
-3. The nine new screenshots are now linked in GitHub. Before merging the evidence PR, I must perform a separate privacy and confidentiality review of these new images and confirm the screenshots' legibility and audit details.
+3. The nine new screenshots are linked in GitHub and have been reviewed and approved by me for public portfolio use. The images support these specific test cases; they do not validate every possible automation branch.
 4. Preserve the simulated organizational context; neither test demonstrates production deployment or a multi-user approval process.

@@ -1,7 +1,6 @@
 # AI Assistance and Human Validation
 
 **Scope:** Simulated Jira Cloud innovation governance portfolio case study  
-**Document date:** 16 October 2026
 
 ## How I used AI
 
@@ -13,6 +12,6 @@ I selected the approach, configured Jira work items and automation rules, ran th
 
 ## Concrete example
 
-During AUTO-04 v2 testing, I identified an interaction with AUTO-07: incomplete evidence caused the simulated Gate 1 approval to revert. I completed the Concept Design Review — Gate 1 (IIR-33) evidence prerequisites, reran the test and confirmed the blocking condition did not match. Prototype & Test — Stage 2 (IIR-2) remained **In Review** after refresh. See [Gate 1 simulation evidence](../01-system-design/gate-1-concept-review-evidence.md) and the [evidence matrix](../04-testing-validation/evidence-traceability-matrix.md).
+During AUTO-04 v2 testing, I identified an interaction with AUTO-07: incomplete evidence caused the simulated Gate 1 approval to revert. I completed the Concept Design Review — Gate 1 (IIR-33) evidence prerequisites, reran the test and confirmed the blocking condition did not match. Prototype & Test — Stage 2 (IIR-2) remained **In Review** after that check. In a later controlled test, I manually moved the work item to **In Progress** and verified that AUTO-04 v2 did not roll it back. This distinction matters: a guard does not automatically advance a stage. See [verified follow-up cases](../04-testing-validation/verified-followup-tests-2026-10-16.md). See [Gate 1 simulation evidence](../01-system-design/gate-1-concept-review-evidence.md) and the [evidence matrix](../04-testing-validation/evidence-traceability-matrix.md).
 
 I do not present AI suggestions as independent verification or claim a live enterprise deployment, measured business impact or production certification.

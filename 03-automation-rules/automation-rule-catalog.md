@@ -1,6 +1,6 @@
 # Jira Automation Rule Catalog — Innovation Implementation Roadmap
 
-**Status:** Owner-authored portfolio documentation; configuration reconciliation pending  
+**Status:** Owner-authored portfolio documentation; Jira-generated configuration exports are planned (see [config](../config/README.md))  
 **Environment:** Simulated Jira Cloud innovation governance workflow
 
 I configured and tested eight controls. This catalog describes their intended functions and my observed tests; it is not a Jira configuration export.
@@ -24,7 +24,7 @@ Evidence: [AUTO-04 v2 audit history](../assets/evidence/EVID-24-AUTO-04-v2-Audit
 
 ## Newly verified scoring calculation
 
-I also retested AUTO-01 on test decision gate (IIR-37) using scores 3, 4, 5, 3 and 4 and configured weights 25%, 15%, 25%, 15% and 20%. The expected and observed Weighted Gate Score were both **3.85**; issue History confirmed the automated update and audit `9210e4a8-2e0f-464a-b712-16f91083b099` showed success. See [the verified follow-up test register](../04-testing-validation/verified-followup-tests-2026-10-16.md). The new screenshots still need repository upload and privacy review.
+I also retested AUTO-01 on test decision gate (IIR-37) using scores 3, 4, 5, 3 and 4 and configured weights 25%, 15%, 25%, 15% and 20%. The expected and observed Weighted Gate Score were both **3.85**; issue History confirmed the automated update and audit `9210e4a8-2e0f-464a-b712-16f91083b099` showed success. See [the verified follow-up test register](../04-testing-validation/verified-followup-tests-2026-10-16.md). The supporting screenshots are published and linked in the verified follow-up test register.
 
 ## Verification standard and limitations
 
