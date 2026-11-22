@@ -12,6 +12,6 @@ I reconstructed known test coverage transparently in the [retrospective integrat
 
 I separately verified [TC-04 (AUTO-04 v2 permitted progression) and TC-01 (AUTO-01 weighted scoring)](verified-followup-tests-2026-10-16.md) against new Jira audit logs, work-item fields and History. These are **two new tests**, not a reconstruction of the original nine. Nine screenshots are now uploaded and linked in the follow-up register. I reviewed and approved these nine screenshots for public portfolio use on 2 November 2026. TC-02 and the remaining new cases are pending.
 
-## Screenshot publication intake — 2 November 2026
+## Screenshot evidence inventory
 
-I supplied nine screenshots covering the two verified follow-up cases, TC-01 and TC-04. The [screenshot evidence manifest](tc01-tc04-screenshot-intake-2026-11-02.md) identifies the nine committed images, exact evidence links and remaining owner privacy review.
+I supplied nine screenshots covering the two verified follow-up cases, TC-01 and TC-04. The [screenshot evidence manifest](tc01-tc04-screenshot-intake-2026-11-02.md) identifies the nine committed images and their exact evidence links. I separately reviewed and approved these images for publication.
